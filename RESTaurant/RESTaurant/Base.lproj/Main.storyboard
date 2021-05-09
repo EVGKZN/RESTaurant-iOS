@@ -1,24 +1,305 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8gI-b1-x3P">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RedHatDisplay-Bold.ttf">
+            <string>RedHatDisplay-Bold</string>
+        </array>
+        <array key="RedHatDisplay-Medium.ttf">
+            <string>RedHatDisplay-Medium</string>
+        </array>
+        <array key="RedHatDisplay-Regular.ttf">
+            <string>RedHatDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="LSc-p8-QEw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-bZ-sx2">
+                                <rect key="frame" x="57" y="348" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6z5-E6-m0B"/>
+                                    <constraint firstAttribute="width" constant="300" id="Mhf-uK-4HU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5e-Wj-Btj">
+                                <rect key="frame" x="24" y="610" width="366" height="66"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="zOU-DP-mjO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="20"/>
+                                <state key="normal" title="Сканировать QR-код">
+                                    <color key="titleColor" name="BrendBlue"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scanQRCodeButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KmA-2z-72k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHb-tU-ner">
+                                <rect key="frame" x="24" y="686" width="366" height="66"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="e0P-Uy-9yh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="20"/>
+                                <state key="normal" title="Авторизоваться">
+                                    <color key="titleColor" name="BrendBlue"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="authorizationButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUt-3g-fjE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="BrandBlue"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vHb-tU-ner" secondAttribute="trailing" constant="24" id="2pH-2S-Nmy"/>
+                            <constraint firstItem="7y1-bZ-sx2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fmt-d3-WIa"/>
+                            <constraint firstItem="LSc-p8-QEw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IdW-Zd-fZ3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K5e-Wj-Btj" secondAttribute="trailing" constant="24" id="MvU-VD-dQd"/>
+                            <constraint firstItem="K5e-Wj-Btj" firstAttribute="top" secondItem="7y1-bZ-sx2" secondAttribute="bottom" constant="62" id="NFq-yC-xQS"/>
+                            <constraint firstItem="vHb-tU-ner" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="bT1-dz-seV"/>
+                            <constraint firstItem="vHb-tU-ner" firstAttribute="top" secondItem="K5e-Wj-Btj" secondAttribute="bottom" constant="10" id="dRF-4f-RMc"/>
+                            <constraint firstItem="LSc-p8-QEw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fNe-td-NMr"/>
+                            <constraint firstItem="7y1-bZ-sx2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q9A-by-QoK"/>
+                            <constraint firstItem="LSc-p8-QEw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qgF-oM-fMT"/>
+                            <constraint firstItem="K5e-Wj-Btj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="x94-ez-d1h"/>
+                            <constraint firstAttribute="bottom" secondItem="LSc-p8-QEw" secondAttribute="bottom" id="ysa-kc-P5V"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Dhh-3k-3Bw"/>
+                    <connections>
+                        <outlet property="authorizationButton" destination="vHb-tU-ner" id="Gfa-X4-NQO"/>
+                        <outlet property="scanQRCodeButton" destination="K5e-Wj-Btj" id="W8h-7F-53p"/>
+                        <segue destination="wqj-zP-PBG" kind="show" identifier="toAuthorizationSegue" id="moX-OK-oHC"/>
+                        <segue destination="8ge-DY-8a1" kind="show" identifier="toQRCodeScannerSegue" id="wH2-F7-7FZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1839.1304347826087" y="93.75"/>
+        </scene>
+        <!--Code Scanner View Controller-->
+        <scene sceneID="hO3-Yc-q1r">
+            <objects>
+                <viewController id="8ge-DY-8a1" customClass="QRCodeScannerViewController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tz7-wD-OJp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tVW-7o-zHc"/>
+                        <color key="backgroundColor" name="BrandBlue"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wJ5-w8-yPo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4n-th-Tod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="-581"/>
+        </scene>
+        <!--Authorization View Controller-->
+        <scene sceneID="Vvy-2f-weA">
+            <objects>
+                <viewController id="wqj-zP-PBG" customClass="AuthorizationViewController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghi-s2-6DM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5X-gl-hza">
+                                <rect key="frame" x="24" y="112" width="366" height="48"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
+                                <color key="textColor" name="BrandBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKu-Y8-U6y">
+                                <rect key="frame" x="24" y="197" width="366" height="29.5"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="22"/>
+                                <color key="textColor" name="BrandBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vMo-qi-7Qt">
+                                <rect key="frame" x="24" y="231.5" width="366" height="52"/>
+                                <color key="backgroundColor" name="BrandGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="z6g-KR-KFP"/>
+                                </constraints>
+                                <color key="textColor" name="BrandWhite"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2D-MV-WsR">
+                                <rect key="frame" x="24" y="313.5" width="366" height="29.5"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="22"/>
+                                <color key="textColor" name="BrandBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GVB-vm-7co">
+                                <rect key="frame" x="24" y="348" width="366" height="52"/>
+                                <color key="backgroundColor" name="BrandGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="WjQ-mS-5yt"/>
+                                </constraints>
+                                <color key="textColor" name="BrandWhite"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZo-a1-YQE">
+                                <rect key="frame" x="282" y="405" width="108" height="31"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleColor" name="BrandLinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPasswordButtonDidPress:" destination="wqj-zP-PBG" eventType="touchUpInside" id="4Fo-Cm-7PJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKM-Us-4NH">
+                                <rect key="frame" x="24" y="447" width="366" height="66"/>
+                                <color key="backgroundColor" name="BrandBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="U3u-C4-k1T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="20"/>
+                                <state key="normal" title="Авторизоваться">
+                                    <color key="titleColor" name="BrandWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="authorizeButtonDidPress:" destination="wqj-zP-PBG" eventType="touchUpInside" id="BIz-zO-qgN"/>
+                                    <action selector="scanQRCodeButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="baX-12-NQs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У вас еще нет аккаунта?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C50-ay-NxR">
+                                <rect key="frame" x="127" y="531" width="160.5" height="19"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
+                                <color key="textColor" name="BrandBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3r-Bh-kiJ">
+                                <rect key="frame" x="138.5" y="550" width="137" height="31"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
+                                <state key="normal" title="Зарегистрироваться">
+                                    <color key="titleColor" name="BrandLinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpButtonDidPress:" destination="wqj-zP-PBG" eventType="touchUpInside" id="dHJ-KY-FJ3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQq-vm-ja8"/>
+                        <color key="backgroundColor" name="BrendWhite"/>
+                        <constraints>
+                            <constraint firstItem="vMo-qi-7Qt" firstAttribute="leading" secondItem="uKu-Y8-U6y" secondAttribute="leading" id="0Um-3X-gGe"/>
+                            <constraint firstItem="m2D-MV-WsR" firstAttribute="trailing" secondItem="vMo-qi-7Qt" secondAttribute="trailing" id="11Y-5b-FKm"/>
+                            <constraint firstItem="fQq-vm-ja8" firstAttribute="trailing" secondItem="j5X-gl-hza" secondAttribute="trailing" constant="24" id="1gh-g8-nVv"/>
+                            <constraint firstItem="GVB-vm-7co" firstAttribute="trailing" secondItem="m2D-MV-WsR" secondAttribute="trailing" id="8IC-l2-bsd"/>
+                            <constraint firstItem="W3r-Bh-kiJ" firstAttribute="centerX" secondItem="ghi-s2-6DM" secondAttribute="centerX" id="908-9N-hRp"/>
+                            <constraint firstItem="zZo-a1-YQE" firstAttribute="top" secondItem="GVB-vm-7co" secondAttribute="bottom" constant="5" id="9Lh-jS-5a6"/>
+                            <constraint firstItem="zZo-a1-YQE" firstAttribute="trailing" secondItem="GVB-vm-7co" secondAttribute="trailing" id="D8M-nf-Df5"/>
+                            <constraint firstItem="j5X-gl-hza" firstAttribute="leading" secondItem="fQq-vm-ja8" secondAttribute="leading" constant="24" id="ETK-7W-JAI"/>
+                            <constraint firstItem="j5X-gl-hza" firstAttribute="top" secondItem="fQq-vm-ja8" secondAttribute="top" constant="24" id="HYC-yA-TAN"/>
+                            <constraint firstItem="GKM-Us-4NH" firstAttribute="leading" secondItem="fQq-vm-ja8" secondAttribute="leading" constant="24" id="Mr1-AM-QEt"/>
+                            <constraint firstItem="W3r-Bh-kiJ" firstAttribute="top" secondItem="C50-ay-NxR" secondAttribute="bottom" id="PSO-eU-9Ar"/>
+                            <constraint firstItem="m2D-MV-WsR" firstAttribute="top" secondItem="vMo-qi-7Qt" secondAttribute="bottom" constant="30" id="RVN-Kl-cfO"/>
+                            <constraint firstItem="C50-ay-NxR" firstAttribute="centerX" secondItem="ghi-s2-6DM" secondAttribute="centerX" id="UgZ-wk-x89"/>
+                            <constraint firstItem="GVB-vm-7co" firstAttribute="top" secondItem="m2D-MV-WsR" secondAttribute="bottom" constant="5" id="Uvd-AF-wzj"/>
+                            <constraint firstItem="uKu-Y8-U6y" firstAttribute="leading" secondItem="j5X-gl-hza" secondAttribute="leading" id="brP-jf-HJ9"/>
+                            <constraint firstItem="uKu-Y8-U6y" firstAttribute="trailing" secondItem="j5X-gl-hza" secondAttribute="trailing" id="dAQ-OB-813"/>
+                            <constraint firstItem="fQq-vm-ja8" firstAttribute="trailing" secondItem="GKM-Us-4NH" secondAttribute="trailing" constant="24" id="dz8-qB-BeI"/>
+                            <constraint firstItem="GVB-vm-7co" firstAttribute="leading" secondItem="m2D-MV-WsR" secondAttribute="leading" id="g5r-i6-umO"/>
+                            <constraint firstItem="m2D-MV-WsR" firstAttribute="leading" secondItem="vMo-qi-7Qt" secondAttribute="leading" id="hLu-Yi-NGy"/>
+                            <constraint firstItem="vMo-qi-7Qt" firstAttribute="trailing" secondItem="uKu-Y8-U6y" secondAttribute="trailing" id="mOs-RF-cmN"/>
+                            <constraint firstItem="GKM-Us-4NH" firstAttribute="top" secondItem="zZo-a1-YQE" secondAttribute="bottom" constant="11" id="tfF-1g-UQF"/>
+                            <constraint firstItem="uKu-Y8-U6y" firstAttribute="top" secondItem="j5X-gl-hza" secondAttribute="bottom" constant="37" id="uxT-Mg-KmV"/>
+                            <constraint firstItem="C50-ay-NxR" firstAttribute="top" secondItem="GKM-Us-4NH" secondAttribute="bottom" constant="18" id="w6d-PJ-eBw"/>
+                            <constraint firstItem="vMo-qi-7Qt" firstAttribute="top" secondItem="uKu-Y8-U6y" secondAttribute="bottom" constant="5" id="zYc-pk-x4z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lYy-TO-Bho">
+                        <barButtonItem key="backBarButtonItem" title="                                          " id="Bse-Lo-kVF"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authorizeButton" destination="GKM-Us-4NH" id="TSg-K5-MSK"/>
+                        <outlet property="emailTextField" destination="vMo-qi-7Qt" id="5YU-nF-bg9"/>
+                        <outlet property="forgotPasswordButton" destination="zZo-a1-YQE" id="g2n-3V-ePr"/>
+                        <outlet property="passwordTextField" destination="GVB-vm-7co" id="Lc6-O6-K0H"/>
+                        <outlet property="signUpButton" destination="W3r-Bh-kiJ" id="jHk-pP-onc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SL5-BN-mba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2779.7101449275365" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VtM-ei-d8a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8gI-b1-x3P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rzd-2k-zRb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zSd-Sv-d4f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13y-Fc-QOy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="375" height="812"/>
+        <image name="Logo" width="310" height="170"/>
+        <namedColor name="BrandBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandBlue">
+            <color red="0.16899999976158142" green="0.24300000071525574" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandGray">
+            <color red="0.66699999570846558" green="0.66699999570846558" blue="0.66699999570846558" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandLinkColor">
+            <color red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrendBlue">
+            <color red="0.16862745098039217" green="0.24313725490196078" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrendWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
