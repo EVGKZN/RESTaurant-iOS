@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,11 @@
 		308010552649531300373E33 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308010542649531300373E33 /* QRScannerView.swift */; };
 		30801057264955C500373E33 /* QRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30801056264955C500373E33 /* QRData.swift */; };
 		3080105926495A3800373E33 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080105826495A3800373E33 /* UIApplication+Extensions.swift */; };
+		3080105B26495FAF00373E33 /* AuthorizationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080105A26495FAF00373E33 /* AuthorizationModule.swift */; };
+		3080105D26495FEB00373E33 /* AuthorizationPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080105C26495FEB00373E33 /* AuthorizationPresenterDefault.swift */; };
+		308010602649653500373E33 /* AuthorizationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080105F2649653500373E33 /* AuthorizationTarget.swift */; };
+		3080106326496EA700373E33 /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080106226496EA700373E33 /* AuthorizationResponse.swift */; };
+		308010652649744700373E33 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308010642649744700373E33 /* BaseViewController.swift */; };
 		30F8D79E264880550072F908 /* RedHatDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30F8D796264880540072F908 /* RedHatDisplay-Medium.ttf */; };
 		30F8D79F264880550072F908 /* RedHatDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30F8D797264880540072F908 /* RedHatDisplay-BoldItalic.ttf */; };
 		30F8D7A0264880550072F908 /* RedHatDisplay-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30F8D798264880540072F908 /* RedHatDisplay-MediumItalic.ttf */; };
@@ -44,6 +49,11 @@
 		308010542649531300373E33 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		30801056264955C500373E33 /* QRData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRData.swift; sourceTree = "<group>"; };
 		3080105826495A3800373E33 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		3080105A26495FAF00373E33 /* AuthorizationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModule.swift; sourceTree = "<group>"; };
+		3080105C26495FEB00373E33 /* AuthorizationPresenterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenterDefault.swift; sourceTree = "<group>"; };
+		3080105F2649653500373E33 /* AuthorizationTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationTarget.swift; sourceTree = "<group>"; };
+		3080106226496EA700373E33 /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
+		308010642649744700373E33 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		30F8D796264880540072F908 /* RedHatDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-Medium.ttf"; sourceTree = "<group>"; };
 		30F8D797264880540072F908 /* RedHatDisplay-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-BoldItalic.ttf"; sourceTree = "<group>"; };
 		30F8D798264880540072F908 /* RedHatDisplay-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -103,6 +113,8 @@
 		304F1E9F25E1B5C800A86F04 /* RESTaurant */ = {
 			isa = PBXGroup;
 			children = (
+				3080106126496E8E00373E33 /* NetworkModels */,
+				3080105E2649652200373E33 /* NetworkTargets */,
 				30F8D7AF26489D1B0072F908 /* Helpers */,
 				30F8D7AE26488FD80072F908 /* Extensions */,
 				30F8D7A8264887360072F908 /* Modules */,
@@ -117,6 +129,22 @@
 				30F8D7AA264888E40072F908 /* Colors.xcassets */,
 			);
 			path = RESTaurant;
+			sourceTree = "<group>";
+		};
+		3080105E2649652200373E33 /* NetworkTargets */ = {
+			isa = PBXGroup;
+			children = (
+				3080105F2649653500373E33 /* AuthorizationTarget.swift */,
+			);
+			path = NetworkTargets;
+			sourceTree = "<group>";
+		};
+		3080106126496E8E00373E33 /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				3080106226496EA700373E33 /* AuthorizationResponse.swift */,
+			);
+			path = NetworkModels;
 			sourceTree = "<group>";
 		};
 		30F8D795264880410072F908 /* Fonts */ = {
@@ -147,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				30F8D7A6264887250072F908 /* AuthorizationViewController.swift */,
+				3080105A26495FAF00373E33 /* AuthorizationModule.swift */,
+				3080105C26495FEB00373E33 /* AuthorizationPresenterDefault.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -166,6 +196,7 @@
 				30F8D7B026489D250072F908 /* GlobalConstants.swift */,
 				308010542649531300373E33 /* QRScannerView.swift */,
 				30801056264955C500373E33 /* QRData.swift */,
+				308010642649744700373E33 /* BaseViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -313,12 +344,17 @@
 				3080105926495A3800373E33 /* UIApplication+Extensions.swift in Sources */,
 				30F8D7A7264887250072F908 /* AuthorizationViewController.swift in Sources */,
 				30801057264955C500373E33 /* QRData.swift in Sources */,
+				3080105B26495FAF00373E33 /* AuthorizationModule.swift in Sources */,
 				304F1EA525E1B5C800A86F04 /* MainMenuViewController.swift in Sources */,
+				308010652649744700373E33 /* BaseViewController.swift in Sources */,
 				30F8D7AD26488A580072F908 /* UIViewController+Extensions.swift in Sources */,
 				30F8D7B426489E4F0072F908 /* QRCodeScannerViewController.swift in Sources */,
 				304F1EA125E1B5C800A86F04 /* AppDelegate.swift in Sources */,
+				3080105D26495FEB00373E33 /* AuthorizationPresenterDefault.swift in Sources */,
 				304F1EA325E1B5C800A86F04 /* SceneDelegate.swift in Sources */,
+				308010602649653500373E33 /* AuthorizationTarget.swift in Sources */,
 				308010552649531300373E33 /* QRScannerView.swift in Sources */,
+				3080106326496EA700373E33 /* AuthorizationResponse.swift in Sources */,
 				30F8D7B126489D250072F908 /* GlobalConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
