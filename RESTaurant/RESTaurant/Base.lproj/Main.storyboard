@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -112,14 +113,58 @@
                     <view key="view" contentMode="scaleToFill" id="Tz7-wD-OJp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наведите камеру на QR-код" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDY-SZ-d4I">
+                                <rect key="frame" x="24" y="112" width="366" height="84"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
+                                <color key="textColor" name="BrandWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVm-xW-hXs" userLabel="ScannerBackground">
+                                <rect key="frame" x="32" y="220" width="350" height="350"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLy-HZ-aNT" customClass="QRScannerView" customModule="RESTaurant" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="25" width="300" height="300"/>
+                                        <color key="backgroundColor" name="BrandBlack"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="835-Mt-2S8"/>
+                                            <constraint firstAttribute="width" constant="300" id="DRW-xY-ePe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="Trf-lB-exh"/>
+                                    <constraint firstAttribute="height" constant="350" id="aYK-E5-Qgk"/>
+                                    <constraint firstItem="wLy-HZ-aNT" firstAttribute="centerY" secondItem="oVm-xW-hXs" secondAttribute="centerY" id="gDs-BX-6WF"/>
+                                    <constraint firstItem="wLy-HZ-aNT" firstAttribute="centerX" secondItem="oVm-xW-hXs" secondAttribute="centerX" id="pF1-Ag-JNo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tVW-7o-zHc"/>
                         <color key="backgroundColor" name="BrandBlue"/>
+                        <constraints>
+                            <constraint firstItem="oVm-xW-hXs" firstAttribute="centerX" secondItem="Tz7-wD-OJp" secondAttribute="centerX" id="AHv-jR-kdn"/>
+                            <constraint firstItem="pDY-SZ-d4I" firstAttribute="top" secondItem="tVW-7o-zHc" secondAttribute="top" constant="24" id="Zgr-pi-Znl"/>
+                            <constraint firstItem="pDY-SZ-d4I" firstAttribute="centerX" secondItem="Tz7-wD-OJp" secondAttribute="centerX" id="ef0-f6-vMx"/>
+                            <constraint firstItem="oVm-xW-hXs" firstAttribute="top" secondItem="pDY-SZ-d4I" secondAttribute="bottom" constant="24" id="nw5-FK-7X7"/>
+                            <constraint firstItem="pDY-SZ-d4I" firstAttribute="leading" secondItem="Tz7-wD-OJp" secondAttribute="leading" constant="24" id="tGk-in-6Ky"/>
+                            <constraint firstAttribute="trailing" secondItem="pDY-SZ-d4I" secondAttribute="trailing" constant="24" id="yJs-N8-Et4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wJ5-w8-yPo"/>
+                    <connections>
+                        <outlet property="qrScannerView" destination="wLy-HZ-aNT" id="0mW-Qd-E3L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4n-th-Tod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="-581"/>
+            <point key="canvasLocation" x="1869.5652173913045" y="-581.25"/>
         </scene>
         <!--Authorization View Controller-->
         <scene sceneID="Vvy-2f-weA">
@@ -130,19 +175,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5X-gl-hza">
-                                <rect key="frame" x="24" y="112" width="366" height="48"/>
+                                <rect key="frame" x="24" y="112" width="366" height="42"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKu-Y8-U6y">
-                                <rect key="frame" x="24" y="197" width="366" height="29.5"/>
+                                <rect key="frame" x="24" y="191" width="366" height="26"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="22"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vMo-qi-7Qt">
-                                <rect key="frame" x="24" y="231.5" width="366" height="52"/>
+                                <rect key="frame" x="24" y="222" width="366" height="52"/>
                                 <color key="backgroundColor" name="BrandGray"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="z6g-KR-KFP"/>
@@ -152,13 +197,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2D-MV-WsR">
-                                <rect key="frame" x="24" y="313.5" width="366" height="29.5"/>
+                                <rect key="frame" x="24" y="304" width="366" height="26"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="22"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GVB-vm-7co">
-                                <rect key="frame" x="24" y="348" width="366" height="52"/>
+                                <rect key="frame" x="24" y="335" width="366" height="52"/>
                                 <color key="backgroundColor" name="BrandGray"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="WjQ-mS-5yt"/>
@@ -168,7 +213,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZo-a1-YQE">
-                                <rect key="frame" x="282" y="405" width="108" height="31"/>
+                                <rect key="frame" x="280" y="392" width="110" height="29"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
                                 <state key="normal" title="Забыли пароль?">
                                     <color key="titleColor" name="BrandLinkColor"/>
@@ -178,7 +223,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKM-Us-4NH">
-                                <rect key="frame" x="24" y="447" width="366" height="66"/>
+                                <rect key="frame" x="24" y="432" width="366" height="66"/>
                                 <color key="backgroundColor" name="BrandBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="U3u-C4-k1T"/>
@@ -198,13 +243,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У вас еще нет аккаунта?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C50-ay-NxR">
-                                <rect key="frame" x="127" y="531" width="160.5" height="19"/>
+                                <rect key="frame" x="126" y="516" width="162" height="16.5"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
                                 <color key="textColor" name="BrandBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3r-Bh-kiJ">
-                                <rect key="frame" x="138.5" y="550" width="137" height="31"/>
+                                <rect key="frame" x="138.5" y="532.5" width="137" height="29"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
                                 <state key="normal" title="Зарегистрироваться">
                                     <color key="titleColor" name="BrandLinkColor"/>
@@ -301,5 +346,8 @@
         <namedColor name="BrendWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

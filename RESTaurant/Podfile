@@ -6,5 +6,5 @@ target 'RESTaurant' do
   use_frameworks!
 
   # Pods for RESTaurant
-
+  pod 'Moya'
 end
