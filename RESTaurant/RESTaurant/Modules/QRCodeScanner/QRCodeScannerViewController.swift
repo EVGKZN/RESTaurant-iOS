@@ -7,17 +7,19 @@
 
 import UIKit
 
-class QRCodeScannerViewController: UIViewController {
+class QRCodeScannerViewController: BaseViewController {
+
+    private let presenter: QRCodeScannerPresenter = QRCodeScannerPresenterDefault()
 
     private class Constants: GlobalConstants { }
 
-    @IBOutlet weak var qrScannerView: QRScannerView! {
+    @IBOutlet private var qrScannerView: QRScannerView! {
         didSet {
             qrScannerView.delegate = self
         }
     }
 
-    var qrData: QRData? = nil {
+    private var qrData: QRData? = nil {
         didSet {
             if qrData != nil {
 
@@ -43,6 +45,7 @@ class QRCodeScannerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        presenter.attachView(view: self)
         setupNavigationController()
     }
 
@@ -52,19 +55,35 @@ class QRCodeScannerViewController: UIViewController {
 }
 
 extension QRCodeScannerViewController: QRScannerViewDelegate {
-    func qrScanningDidStop() {
-
-    }
+    func qrScanningDidStop() { }
 
     func qrScanningDidFail() {
-        presentAlert(withTitle: "Ошибка", message: "Сканирование не удалось. Попробуйте еще раз")
+        hideActivityIndicatorView()
+        presentAlert(withTitle: Constants.errorTitle, message: "Сканирование не удалось. Попробуйте еще раз")
     }
 
     func qrScanningSucceededWithCode(_ str: String?) {
-        self.qrData = QRData(codeString: str)
-        guard let code = str else { return }
-        let alertController = UIAlertController(title: "Результат сканирования", message: code, preferredStyle: .alert)
+        guard let result = str else {
+            qrScanningDidFail()
+            return
+        }
+        showActivityIndicatorView()
+        presenter.checkQRCodeScanningResult(result: result)
+    }
+}
+
+extension QRCodeScannerViewController: QRCodeScannerView {
+    func performSuccessfulTableReserving() {
+        let storyboard = UIStoryboard(name: Constants.storyboardClientWorkflowName, bundle: nil)
+        let clientWorflowVc = storyboard.instantiateViewController(identifier: Constants.viewControllerClientTabBarName)
+        UIApplication.shared.windows.first?.rootViewController = clientWorflowVc
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+
+    func showErrorAlert() {
+        let alertController = UIAlertController(title: Constants.errorTitle, message: "Что-то пошло не так, попробуйте еще раз позже", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "ОК", style: .default) { [weak self] _ in
+            self?.hideActivityIndicatorView()
             self?.qrScannerView.startScanning()
         }
         alertController.addAction(okAction)

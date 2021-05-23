@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30146305265A778B00D572D9 /* ClientTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146303265A778B00D572D9 /* ClientTabBarViewController.swift */; };
+		30146308265A77B900D572D9 /* ClientWorkflow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30146307265A77B900D572D9 /* ClientWorkflow.storyboard */; };
+		3014630D265A802B00D572D9 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014630C265A802B00D572D9 /* ClientProfileViewController.swift */; };
+		3014630F265A85BD00D572D9 /* ClientCurrentOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014630E265A85BD00D572D9 /* ClientCurrentOrderViewController.swift */; };
+		30146311265A85C700D572D9 /* ClientOrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146310265A85C700D572D9 /* ClientOrderHistoryViewController.swift */; };
+		30146315265A977100D572D9 /* CurrentOrderPositionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146313265A977100D572D9 /* CurrentOrderPositionTableViewCell.swift */; };
+		30146316265A977100D572D9 /* CurrentOrderPositionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30146314265A977100D572D9 /* CurrentOrderPositionTableViewCell.xib */; };
+		30146318265A9E0C00D572D9 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146317265A9E0C00D572D9 /* UITableView+Extensions.swift */; };
+		3014631A265A9E2400D572D9 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146319265A9E2400D572D9 /* UITableViewCell+Extensions.swift */; };
+		3014631C265AC03500D572D9 /* TableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014631B265AC03500D572D9 /* TableTarget.swift */; };
+		3014631E265AC0B400D572D9 /* QRCodeScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014631D265AC0B400D572D9 /* QRCodeScannerPresenter.swift */; };
+		30146320265AC0C800D572D9 /* QRCodeScannerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014631F265AC0C800D572D9 /* QRCodeScannerModule.swift */; };
+		30146322265AD34700D572D9 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146321265AD34700D572D9 /* OrderResponse.swift */; };
+		30146324265AD5A900D572D9 /* OrderTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146323265AD5A900D572D9 /* OrderTarget.swift */; };
+		30146326265AD63000D572D9 /* ClientCurrentOrderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146325265AD63000D572D9 /* ClientCurrentOrderModule.swift */; };
+		30146328265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146327265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift */; };
 		304F1EA125E1B5C800A86F04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA025E1B5C800A86F04 /* AppDelegate.swift */; };
 		304F1EA325E1B5C800A86F04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */; };
 		304F1EA525E1B5C800A86F04 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA425E1B5C800A86F04 /* MainMenuViewController.swift */; };
@@ -38,6 +54,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30146303265A778B00D572D9 /* ClientTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarViewController.swift; sourceTree = "<group>"; };
+		30146307265A77B900D572D9 /* ClientWorkflow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientWorkflow.storyboard; sourceTree = "<group>"; };
+		3014630C265A802B00D572D9 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileViewController.swift; sourceTree = "<group>"; };
+		3014630E265A85BD00D572D9 /* ClientCurrentOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCurrentOrderViewController.swift; sourceTree = "<group>"; };
+		30146310265A85C700D572D9 /* ClientOrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientOrderHistoryViewController.swift; sourceTree = "<group>"; };
+		30146313265A977100D572D9 /* CurrentOrderPositionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOrderPositionTableViewCell.swift; sourceTree = "<group>"; };
+		30146314265A977100D572D9 /* CurrentOrderPositionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentOrderPositionTableViewCell.xib; sourceTree = "<group>"; };
+		30146317265A9E0C00D572D9 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		30146319265A9E2400D572D9 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		3014631B265AC03500D572D9 /* TableTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTarget.swift; sourceTree = "<group>"; };
+		3014631D265AC0B400D572D9 /* QRCodeScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerPresenter.swift; sourceTree = "<group>"; };
+		3014631F265AC0C800D572D9 /* QRCodeScannerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerModule.swift; sourceTree = "<group>"; };
+		30146321265AD34700D572D9 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
+		30146323265AD5A900D572D9 /* OrderTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTarget.swift; sourceTree = "<group>"; };
+		30146325265AD63000D572D9 /* ClientCurrentOrderModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCurrentOrderModule.swift; sourceTree = "<group>"; };
+		30146327265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCurrentOrderPresenterDefault.swift; sourceTree = "<group>"; };
 		304F1E9D25E1B5C800A86F04 /* RESTaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304F1EA025E1B5C800A86F04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +124,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		30146302265A76A800D572D9 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				3014630B265A7FF400D572D9 /* OrderHistory */,
+				3014630A265A7FDD00D572D9 /* CurrentOrder */,
+				30146309265A7FD200D572D9 /* Profile */,
+				30146303265A778B00D572D9 /* ClientTabBarViewController.swift */,
+				30146307265A77B900D572D9 /* ClientWorkflow.storyboard */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		30146309265A7FD200D572D9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3014630C265A802B00D572D9 /* ClientProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3014630A265A7FDD00D572D9 /* CurrentOrder */ = {
+			isa = PBXGroup;
+			children = (
+				30146312265A96F900D572D9 /* CurrentOrderPositionCell */,
+				3014630E265A85BD00D572D9 /* ClientCurrentOrderViewController.swift */,
+				30146325265AD63000D572D9 /* ClientCurrentOrderModule.swift */,
+				30146327265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift */,
+			);
+			path = CurrentOrder;
+			sourceTree = "<group>";
+		};
+		3014630B265A7FF400D572D9 /* OrderHistory */ = {
+			isa = PBXGroup;
+			children = (
+				30146310265A85C700D572D9 /* ClientOrderHistoryViewController.swift */,
+			);
+			path = OrderHistory;
+			sourceTree = "<group>";
+		};
+		30146312265A96F900D572D9 /* CurrentOrderPositionCell */ = {
+			isa = PBXGroup;
+			children = (
+				30146313265A977100D572D9 /* CurrentOrderPositionTableViewCell.swift */,
+				30146314265A977100D572D9 /* CurrentOrderPositionTableViewCell.xib */,
+			);
+			path = CurrentOrderPositionCell;
+			sourceTree = "<group>";
+		};
 		304F1E9425E1B5C800A86F04 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				3080105F2649653500373E33 /* AuthorizationTarget.swift */,
+				3014631B265AC03500D572D9 /* TableTarget.swift */,
+				30146323265AD5A900D572D9 /* OrderTarget.swift */,
 			);
 			path = NetworkTargets;
 			sourceTree = "<group>";
@@ -143,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				3080106226496EA700373E33 /* AuthorizationResponse.swift */,
+				30146321265AD34700D572D9 /* OrderResponse.swift */,
 			);
 			path = NetworkModels;
 			sourceTree = "<group>";
@@ -165,6 +248,7 @@
 		30F8D7A8264887360072F908 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				30146302265A76A800D572D9 /* Client */,
 				30F8D7B226489E3D0072F908 /* QRCodeScanner */,
 				30F8D7A92648873C0072F908 /* Authorization */,
 			);
@@ -186,6 +270,8 @@
 			children = (
 				30F8D7AC26488A580072F908 /* UIViewController+Extensions.swift */,
 				3080105826495A3800373E33 /* UIApplication+Extensions.swift */,
+				30146317265A9E0C00D572D9 /* UITableView+Extensions.swift */,
+				30146319265A9E2400D572D9 /* UITableViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				30F8D7B326489E4F0072F908 /* QRCodeScannerViewController.swift */,
+				3014631D265AC0B400D572D9 /* QRCodeScannerPresenter.swift */,
+				3014631F265AC0C800D572D9 /* QRCodeScannerModule.swift */,
 			);
 			path = QRCodeScanner;
 			sourceTree = "<group>";
@@ -278,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F8D79E264880550072F908 /* RedHatDisplay-Medium.ttf in Resources */,
+				30146308265A77B900D572D9 /* ClientWorkflow.storyboard in Resources */,
 				304F1EAD25E1B5CC00A86F04 /* LaunchScreen.storyboard in Resources */,
 				30F8D7A4264880550072F908 /* RedHatDisplay-Regular.ttf in Resources */,
 				30F8D7A0264880550072F908 /* RedHatDisplay-MediumItalic.ttf in Resources */,
@@ -289,6 +378,7 @@
 				30F8D7AB264888E40072F908 /* Colors.xcassets in Resources */,
 				30F8D7A1264880550072F908 /* RedHatDisplay-Bold.ttf in Resources */,
 				30F8D7A3264880550072F908 /* RedHatDisplay-BlackItalic.ttf in Resources */,
+				30146316265A977100D572D9 /* CurrentOrderPositionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,21 +431,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3014630F265A85BD00D572D9 /* ClientCurrentOrderViewController.swift in Sources */,
+				30146315265A977100D572D9 /* CurrentOrderPositionTableViewCell.swift in Sources */,
+				30146320265AC0C800D572D9 /* QRCodeScannerModule.swift in Sources */,
 				3080105926495A3800373E33 /* UIApplication+Extensions.swift in Sources */,
+				3014630D265A802B00D572D9 /* ClientProfileViewController.swift in Sources */,
 				30F8D7A7264887250072F908 /* AuthorizationViewController.swift in Sources */,
+				30146324265AD5A900D572D9 /* OrderTarget.swift in Sources */,
 				30801057264955C500373E33 /* QRData.swift in Sources */,
+				30146322265AD34700D572D9 /* OrderResponse.swift in Sources */,
+				30146326265AD63000D572D9 /* ClientCurrentOrderModule.swift in Sources */,
 				3080105B26495FAF00373E33 /* AuthorizationModule.swift in Sources */,
 				304F1EA525E1B5C800A86F04 /* MainMenuViewController.swift in Sources */,
 				308010652649744700373E33 /* BaseViewController.swift in Sources */,
 				30F8D7AD26488A580072F908 /* UIViewController+Extensions.swift in Sources */,
+				30146311265A85C700D572D9 /* ClientOrderHistoryViewController.swift in Sources */,
 				30F8D7B426489E4F0072F908 /* QRCodeScannerViewController.swift in Sources */,
 				304F1EA125E1B5C800A86F04 /* AppDelegate.swift in Sources */,
 				3080105D26495FEB00373E33 /* AuthorizationPresenterDefault.swift in Sources */,
+				30146305265A778B00D572D9 /* ClientTabBarViewController.swift in Sources */,
+				30146318265A9E0C00D572D9 /* UITableView+Extensions.swift in Sources */,
 				304F1EA325E1B5C800A86F04 /* SceneDelegate.swift in Sources */,
+				30146328265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift in Sources */,
 				308010602649653500373E33 /* AuthorizationTarget.swift in Sources */,
+				3014631A265A9E2400D572D9 /* UITableViewCell+Extensions.swift in Sources */,
+				3014631C265AC03500D572D9 /* TableTarget.swift in Sources */,
 				308010552649531300373E33 /* QRScannerView.swift in Sources */,
 				3080106326496EA700373E33 /* AuthorizationResponse.swift in Sources */,
 				30F8D7B126489D250072F908 /* GlobalConstants.swift in Sources */,
+				3014631E265AC0B400D572D9 /* QRCodeScannerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

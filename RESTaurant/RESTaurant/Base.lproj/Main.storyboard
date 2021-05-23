@@ -197,13 +197,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПАРОЛЬ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2D-MV-WsR">
-                                <rect key="frame" x="24" y="313.5" width="366" height="30"/>
+                                <rect key="frame" x="24" y="313.5" width="366" height="29.5"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="22"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GVB-vm-7co">
-                                <rect key="frame" x="24" y="348.5" width="366" height="52"/>
+                                <rect key="frame" x="24" y="348" width="366" height="52"/>
                                 <color key="backgroundColor" name="BrandGray"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="WjQ-mS-5yt"/>
@@ -213,7 +213,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZo-a1-YQE">
-                                <rect key="frame" x="282" y="405.5" width="108" height="31"/>
+                                <rect key="frame" x="282" y="405" width="108" height="31"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
                                 <state key="normal" title="Забыли пароль?">
                                     <color key="titleColor" name="BrandLinkColor"/>
@@ -223,7 +223,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKM-Us-4NH">
-                                <rect key="frame" x="24" y="447.5" width="366" height="66"/>
+                                <rect key="frame" x="24" y="447" width="366" height="66"/>
                                 <color key="backgroundColor" name="BrandBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="U3u-C4-k1T"/>
@@ -243,13 +243,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У вас еще нет аккаунта?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C50-ay-NxR">
-                                <rect key="frame" x="127" y="531.5" width="160.5" height="19"/>
+                                <rect key="frame" x="127" y="531" width="160.5" height="19"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
                                 <color key="textColor" name="BrandBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3r-Bh-kiJ">
-                                <rect key="frame" x="138.5" y="550.5" width="137" height="31"/>
+                                <rect key="frame" x="138.5" y="550" width="137" height="31"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
                                 <state key="normal" title="Зарегистрироваться">
                                     <color key="titleColor" name="BrandLinkColor"/>

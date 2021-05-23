@@ -24,5 +24,17 @@ class MainMenuViewController: UIViewController {
     @IBAction func authorizationButtonDidPress(_ sender: Any) {
         performSegue(withIdentifier: Constants.authorizationViewSegueIdentifier, sender: nil)
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        if let tableID = UserDefaults.standard.string(forKey: GlobalConstants.userDefaultsCurrentTableIDKey) {
+            print(tableID)
+            let storyboard = UIStoryboard(name: GlobalConstants.storyboardClientWorkflowName, bundle: nil)
+            let clientWorflowVc = storyboard.instantiateViewController(identifier: GlobalConstants.viewControllerClientTabBarName)
+            UIApplication.shared.windows.first?.rootViewController = clientWorflowVc
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
+    }
 }
 
