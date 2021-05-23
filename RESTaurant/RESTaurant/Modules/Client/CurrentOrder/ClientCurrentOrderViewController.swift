@@ -19,6 +19,7 @@ class ClientCurrentOrderViewController: BaseViewController {
     
     private let presenter: ClientCurrentOrderPresenter = ClientCurrentOrderPresenterDefault()
     private var orderInfo: OrderResponse? = nil
+    private let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class ClientCurrentOrderViewController: BaseViewController {
         presenter.attachView(view: self)
         setupOrderContainerView()
         setupOrderPositionsTableView()
+        setupRefreshControl()
         checkOrderPositions()
         presenter.loadOrderInfo()
         showActivityIndicatorView()
@@ -37,6 +39,11 @@ class ClientCurrentOrderViewController: BaseViewController {
                 noPositionsView.isHidden = false
                 orderContainterView.isHidden = true
             } else {
+                var totalAmount: Int = 0
+                for position in orderInfo.positions {
+                    totalAmount += position.dish.cost
+                }
+                totalAmountLabel.text = "\(totalAmount) руб."
                 noPositionsView.isHidden = true
                 orderContainterView.isHidden = false
             }
@@ -58,6 +65,20 @@ class ClientCurrentOrderViewController: BaseViewController {
         orderPositionsTableView.dataSource = self
         orderPositionsTableView.registerCell(type: CurrentOrderPositionTableViewCell.self, identifier: nil)
         orderPositionsTableView.separatorStyle = .none
+        if #available(iOS 10.0, *) {
+            orderPositionsTableView.refreshControl = refreshControl
+        } else {
+            orderPositionsTableView.addSubview(refreshControl)
+        }
+    }
+
+    private func setupRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refreshOrderInfo), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Обновляем состояние заказа...", attributes: nil)
+    }
+
+    @objc func refreshOrderInfo() {
+        presenter.loadOrderInfo()
     }
 }
 
@@ -72,6 +93,7 @@ extension ClientCurrentOrderViewController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueCell(withType: CurrentOrderPositionTableViewCell.self) as? CurrentOrderPositionTableViewCell else { return UITableViewCell() }
+        cell.selectionStyle = .none
         guard let position = orderInfo?.positions[indexPath.row] else { return cell }
         cell.configure(position: position)
         return cell
@@ -80,6 +102,7 @@ extension ClientCurrentOrderViewController : UITableViewDataSource {
 
 extension ClientCurrentOrderViewController: ClientCurrentOrderView {
     func showOrderInfo(info: OrderResponse) {
+        refreshControl.endRefreshing()
         self.orderInfo = info
         if let employee = orderInfo?.employee {
             self.waiterNameLabel.text = "\(employee.firstName) \(employee.lastName)"

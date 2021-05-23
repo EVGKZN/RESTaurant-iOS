@@ -23,8 +23,8 @@ class CurrentOrderPositionTableViewCell: UITableViewCell {
     }
 
     func configure(position: PositionResponse) {
-        self.positionNameLabel.text = position.dish?.name
-        self.positionCostLabel.text = "\(position.dish?.cost)"
+        self.positionNameLabel.text = position.dish.name
+        self.positionCostLabel.text = "\(position.dish.cost) руб."
         self.positionStatusImageView.image = getPositionStatusImage(status: position.status)
     }
 
