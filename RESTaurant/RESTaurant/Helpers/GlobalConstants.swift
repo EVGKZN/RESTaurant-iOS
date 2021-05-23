@@ -19,4 +19,5 @@ public class GlobalConstants {
     static let errorTitle = "Ошибка"
 
     static let userDefaultsCurrentTableIDKey = "CurrentTableID"
+    static let userDefaultsCurrentAccountInfoIDKey = "CurrentAccountInfo"
 }

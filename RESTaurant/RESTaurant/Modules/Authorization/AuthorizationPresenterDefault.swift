@@ -24,6 +24,10 @@ class AuthorizationPresenterDefault: AuthorizationPresenter {
                 do {
                     print(response)
                     let authResponse = try JSONDecoder().decode(AuthorizationResponse.self, from: response.data)
+                    let encoder = JSONEncoder()
+                    if let encoded = try? encoder.encode(authResponse) {
+                        UserDefaults.standard.set(encoded, forKey: GlobalConstants.userDefaultsCurrentAccountInfoIDKey)
+                    }
                     self?.view?.presentSuccess(response: authResponse)
                 } catch {
                     self?.view?.presentNetworkFailure(errorCode: response.statusCode)

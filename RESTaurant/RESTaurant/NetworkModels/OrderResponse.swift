@@ -14,6 +14,7 @@ struct OrderResponse: Decodable {
     let positions: [PositionResponse]
     let employee: EmployeeResponse?
     let status: String
+    let createTime: String
 }
 
 struct TableResponse: Decodable {
@@ -21,6 +22,7 @@ struct TableResponse: Decodable {
     let seatCount: Int
     let restaurant: RestaurantResponse
     let status: String
+    let number: Int
 }
 
 struct RestaurantResponse: Decodable {
@@ -64,7 +66,7 @@ struct EmployeeResponse: Decodable {
     let restaurant: RestaurantResponse
 }
 
-struct AccountResponse: Decodable {
+struct AccountResponse: Codable {
     let id: Int
     let email: String
     let role: String

@@ -23,6 +23,7 @@
 		30146324265AD5A900D572D9 /* OrderTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146323265AD5A900D572D9 /* OrderTarget.swift */; };
 		30146326265AD63000D572D9 /* ClientCurrentOrderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146325265AD63000D572D9 /* ClientCurrentOrderModule.swift */; };
 		30146328265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146327265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift */; };
+		3014632B265B091F00D572D9 /* WaiterWorkflow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3014632A265B091F00D572D9 /* WaiterWorkflow.storyboard */; };
 		304F1EA125E1B5C800A86F04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA025E1B5C800A86F04 /* AppDelegate.swift */; };
 		304F1EA325E1B5C800A86F04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */; };
 		304F1EA525E1B5C800A86F04 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA425E1B5C800A86F04 /* MainMenuViewController.swift */; };
@@ -70,6 +71,7 @@
 		30146323265AD5A900D572D9 /* OrderTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTarget.swift; sourceTree = "<group>"; };
 		30146325265AD63000D572D9 /* ClientCurrentOrderModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCurrentOrderModule.swift; sourceTree = "<group>"; };
 		30146327265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCurrentOrderPresenterDefault.swift; sourceTree = "<group>"; };
+		3014632A265B091F00D572D9 /* WaiterWorkflow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WaiterWorkflow.storyboard; sourceTree = "<group>"; };
 		304F1E9D25E1B5C800A86F04 /* RESTaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304F1EA025E1B5C800A86F04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,14 @@
 			path = CurrentOrderPositionCell;
 			sourceTree = "<group>";
 		};
+		30146329265B090900D572D9 /* Waiter */ = {
+			isa = PBXGroup;
+			children = (
+				3014632A265B091F00D572D9 /* WaiterWorkflow.storyboard */,
+			);
+			path = Waiter;
+			sourceTree = "<group>";
+		};
 		304F1E9425E1B5C800A86F04 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +258,7 @@
 		30F8D7A8264887360072F908 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				30146329265B090900D572D9 /* Waiter */,
 				30146302265A76A800D572D9 /* Client */,
 				30F8D7B226489E3D0072F908 /* QRCodeScanner */,
 				30F8D7A92648873C0072F908 /* Authorization */,
@@ -378,6 +389,7 @@
 				30F8D7AB264888E40072F908 /* Colors.xcassets in Resources */,
 				30F8D7A1264880550072F908 /* RedHatDisplay-Bold.ttf in Resources */,
 				30F8D7A3264880550072F908 /* RedHatDisplay-BlackItalic.ttf in Resources */,
+				3014632B265B091F00D572D9 /* WaiterWorkflow.storyboard in Resources */,
 				30146316265A977100D572D9 /* CurrentOrderPositionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

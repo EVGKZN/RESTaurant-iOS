@@ -28,12 +28,13 @@ class ClientCurrentOrderViewController: BaseViewController {
         setupOrderContainerView()
         setupOrderPositionsTableView()
         setupRefreshControl()
-        checkOrderPositions()
+        noPositionsView.isHidden = false
+        orderContainterView.isHidden = true
         presenter.loadOrderInfo()
         showActivityIndicatorView()
     }
 
-    private func checkOrderPositions() {
+    private func setupData() {
         if let orderInfo = orderInfo {
             if orderInfo.positions.isEmpty {
                 noPositionsView.isHidden = false
@@ -46,6 +47,24 @@ class ClientCurrentOrderViewController: BaseViewController {
                 totalAmountLabel.text = "\(totalAmount) руб."
                 noPositionsView.isHidden = true
                 orderContainterView.isHidden = false
+
+                if let employee = orderInfo.employee {
+                    self.waiterNameLabel.text = "\(employee.firstName) \(employee.lastName)"
+                }
+                tableNumberLabel.text = "\(orderInfo.table.number)"
+
+                let fromDateFormatter = ISO8601DateFormatter()
+                if let fromIndex = orderInfo.createTime.firstIndex(of: "."), let toIndex = orderInfo.createTime.firstIndex(of: "+") {
+                    var normalizedStringDate = orderInfo.createTime
+                    normalizedStringDate.removeSubrange(fromIndex..<toIndex)
+                    if let date = fromDateFormatter.date(from: normalizedStringDate) {
+                        let toDateFormatter = DateFormatter()
+                        toDateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+                        toDateFormatter.dateFormat = "HH:mm"
+                        let dateString = toDateFormatter.string(from: date)
+                        reservationTimeLabel.text = dateString
+                    }
+                }
             }
         } else {
             noPositionsView.isHidden = false
@@ -77,7 +96,7 @@ class ClientCurrentOrderViewController: BaseViewController {
         refreshControl.attributedTitle = NSAttributedString(string: "Обновляем состояние заказа...", attributes: nil)
     }
 
-    @objc func refreshOrderInfo() {
+    @objc private func refreshOrderInfo() {
         presenter.loadOrderInfo()
     }
 }
@@ -104,10 +123,7 @@ extension ClientCurrentOrderViewController: ClientCurrentOrderView {
     func showOrderInfo(info: OrderResponse) {
         refreshControl.endRefreshing()
         self.orderInfo = info
-        if let employee = orderInfo?.employee {
-            self.waiterNameLabel.text = "\(employee.firstName) \(employee.lastName)"
-        }
-        checkOrderPositions()
+        setupData()
         orderPositionsTableView.reloadData()
         hideActivityIndicatorView()
     }

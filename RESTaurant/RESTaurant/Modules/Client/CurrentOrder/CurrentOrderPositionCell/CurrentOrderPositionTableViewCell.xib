@@ -35,16 +35,16 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="c7i-VU-P9O">
-                        <rect key="frame" x="80" y="17.5" width="96.5" height="35"/>
+                        <rect key="frame" x="80" y="20" width="92" height="30.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH5-0E-AkZ">
-                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="19"/>
+                                <rect key="frame" x="0.0" y="0.0" width="92" height="16.5"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="14"/>
                                 <color key="textColor" name="BrandSemiBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nn-ll-kOW">
-                                <rect key="frame" x="0.0" y="19" width="96.5" height="16"/>
+                                <rect key="frame" x="0.0" y="16.5" width="92" height="14"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="12"/>
                                 <color key="textColor" name="BrandSemiBlack"/>
                                 <nil key="highlightedColor"/>

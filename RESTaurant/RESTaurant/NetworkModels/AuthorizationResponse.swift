@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct AuthorizationResponse: Decodable {
+struct AuthorizationResponse: Codable {
     let token: String
+    let account: AccountResponse
 }
