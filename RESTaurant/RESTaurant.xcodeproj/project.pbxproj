@@ -48,6 +48,11 @@
 		3014635E265C149200D572D9 /* PositionTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014635D265C149200D572D9 /* PositionTarget.swift */; };
 		30146362265C1BA000D572D9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146361265C1BA000D572D9 /* MenuViewController.swift */; };
 		30146364265C1BA900D572D9 /* MenuModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146363265C1BA900D572D9 /* MenuModule.swift */; };
+		30146366265C1D3700D572D9 /* MenuPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146365265C1D3700D572D9 /* MenuPresenterDefault.swift */; };
+		3014636A265C222100D572D9 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146368265C222100D572D9 /* MenuTableViewCell.swift */; };
+		3014636B265C222100D572D9 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30146369265C222100D572D9 /* MenuTableViewCell.xib */; };
+		3014636D265C29ED00D572D9 /* MenuTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014636C265C29ED00D572D9 /* MenuTarget.swift */; };
+		3014636F265C2AAB00D572D9 /* DishTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014636E265C2AAB00D572D9 /* DishTarget.swift */; };
 		304F1EA125E1B5C800A86F04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA025E1B5C800A86F04 /* AppDelegate.swift */; };
 		304F1EA325E1B5C800A86F04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */; };
 		304F1EA525E1B5C800A86F04 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA425E1B5C800A86F04 /* MainMenuViewController.swift */; };
@@ -120,6 +125,11 @@
 		3014635D265C149200D572D9 /* PositionTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTarget.swift; sourceTree = "<group>"; };
 		30146361265C1BA000D572D9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		30146363265C1BA900D572D9 /* MenuModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModule.swift; sourceTree = "<group>"; };
+		30146365265C1D3700D572D9 /* MenuPresenterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterDefault.swift; sourceTree = "<group>"; };
+		30146368265C222100D572D9 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		30146369265C222100D572D9 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		3014636C265C29ED00D572D9 /* MenuTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTarget.swift; sourceTree = "<group>"; };
+		3014636E265C2AAB00D572D9 /* DishTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTarget.swift; sourceTree = "<group>"; };
 		304F1E9D25E1B5C800A86F04 /* RESTaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304F1EA025E1B5C800A86F04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -307,10 +317,21 @@
 		3014635F265C1B6C00D572D9 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				30146367265C220300D572D9 /* MenuTableViewCell */,
 				30146361265C1BA000D572D9 /* MenuViewController.swift */,
 				30146363265C1BA900D572D9 /* MenuModule.swift */,
+				30146365265C1D3700D572D9 /* MenuPresenterDefault.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		30146367265C220300D572D9 /* MenuTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				30146368265C222100D572D9 /* MenuTableViewCell.swift */,
+				30146369265C222100D572D9 /* MenuTableViewCell.xib */,
+			);
+			path = MenuTableViewCell;
 			sourceTree = "<group>";
 		};
 		304F1E9425E1B5C800A86F04 = {
@@ -360,6 +381,8 @@
 				30146323265AD5A900D572D9 /* OrderTarget.swift */,
 				3014632C265B124B00D572D9 /* EmployeeTarget.swift */,
 				3014635D265C149200D572D9 /* PositionTarget.swift */,
+				3014636C265C29ED00D572D9 /* MenuTarget.swift */,
+				3014636E265C2AAB00D572D9 /* DishTarget.swift */,
 			);
 			path = NetworkTargets;
 			sourceTree = "<group>";
@@ -525,6 +548,7 @@
 				3014635C265C111700D572D9 /* OrderDetailPositionTableViewCell.xib in Resources */,
 				304F1EA825E1B5C800A86F04 /* Main.storyboard in Resources */,
 				30F8D7A5264880550072F908 /* RedHatDisplay-Italic.ttf in Resources */,
+				3014636B265C222100D572D9 /* MenuTableViewCell.xib in Resources */,
 				30F8D7AB264888E40072F908 /* Colors.xcassets in Resources */,
 				30F8D7A1264880550072F908 /* RedHatDisplay-Bold.ttf in Resources */,
 				30F8D7A3264880550072F908 /* RedHatDisplay-BlackItalic.ttf in Resources */,
@@ -604,12 +628,14 @@
 				3080105B26495FAF00373E33 /* AuthorizationModule.swift in Sources */,
 				30146355265C0D8B00D572D9 /* OrderDetailModule.swift in Sources */,
 				304F1EA525E1B5C800A86F04 /* MainMenuViewController.swift in Sources */,
+				3014636A265C222100D572D9 /* MenuTableViewCell.swift in Sources */,
 				3014633E265BE90900D572D9 /* WaiterFreeOrdersModule.swift in Sources */,
 				308010652649744700373E33 /* BaseViewController.swift in Sources */,
 				3014635B265C111700D572D9 /* OrderDetailPositionTableViewCell.swift in Sources */,
 				30F8D7AD26488A580072F908 /* UIViewController+Extensions.swift in Sources */,
 				30146311265A85C700D572D9 /* ClientOrderHistoryViewController.swift in Sources */,
 				30F8D7B426489E4F0072F908 /* QRCodeScannerViewController.swift in Sources */,
+				30146366265C1D3700D572D9 /* MenuPresenterDefault.swift in Sources */,
 				3014634B265BFD9000D572D9 /* WaiterMyOrdersPresenterDefault.swift in Sources */,
 				3014632F265B169300D572D9 /* UITabBarController+Extensions.swift in Sources */,
 				30146333265B17F100D572D9 /* UserDefaultsHelper.swift in Sources */,
@@ -625,8 +651,10 @@
 				30146328265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift in Sources */,
 				308010602649653500373E33 /* AuthorizationTarget.swift in Sources */,
 				3014631A265A9E2400D572D9 /* UITableViewCell+Extensions.swift in Sources */,
+				3014636D265C29ED00D572D9 /* MenuTarget.swift in Sources */,
 				3014631C265AC03500D572D9 /* TableTarget.swift in Sources */,
 				308010552649531300373E33 /* QRScannerView.swift in Sources */,
+				3014636F265C2AAB00D572D9 /* DishTarget.swift in Sources */,
 				3014635E265C149200D572D9 /* PositionTarget.swift in Sources */,
 				3080106326496EA700373E33 /* AuthorizationResponse.swift in Sources */,
 				30F8D7B126489D250072F908 /* GlobalConstants.swift in Sources */,

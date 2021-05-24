@@ -101,7 +101,14 @@ class OrderDetailViewController: BaseViewController {
     }
 
     @objc private func menuButtonDidPress() {
+        performSegue(withIdentifier: "toMenuViewController", sender: order)
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMenuViewController" {
+            guard let order = sender as? OrderResponse, let destination = segue.destination as? MenuViewController else { return }
+            destination.configure(order: order)
+        }
     }
 }
 
@@ -118,6 +125,7 @@ extension OrderDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueCell(withType: OrderDetailPositionTableViewCell.self) as? OrderDetailPositionTableViewCell else { return UITableViewCell() }
         guard let order = order else { return cell }
+        cell.selectionStyle = .none
         cell.configure(position: order.positions[indexPath.row])
         cell.servePosition = { [weak self] positionID in
             self?.servePosition(positionID: positionID)

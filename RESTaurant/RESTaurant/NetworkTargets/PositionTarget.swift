@@ -9,6 +9,7 @@ import Moya
 
 public enum PositionTarget {
     case changePositionStatus(positionID: Int, status: String)
+    case addPositionByDishIdToOrder(dishID: Int, orderID: String)
 }
 
 extension PositionTarget: TargetType {
@@ -21,12 +22,14 @@ extension PositionTarget: TargetType {
         switch self {
         case .changePositionStatus:
             return "/api/position/status"
+        case .addPositionByDishIdToOrder:
+            return "/api/position"
         }
     }
 
     public var method: Method {
         switch self {
-        case .changePositionStatus:
+        case .changePositionStatus, .addPositionByDishIdToOrder:
             return .post
         }
     }
@@ -39,6 +42,8 @@ extension PositionTarget: TargetType {
         switch self {
         case .changePositionStatus(let positionID, let positionStatus):
             return .requestParameters(parameters: ["id" : positionID, "status" : positionStatus], encoding: JSONEncoding.default)
+        case .addPositionByDishIdToOrder(let dishID, let orderID):
+            return .requestJSONEncodable(AddRequest(dish: Dish(id: dishID), orderId: orderID))
         }
     }
 
@@ -49,4 +54,13 @@ extension PositionTarget: TargetType {
         }
         return ["Authorization":token]
     }
+}
+
+private struct Dish: Codable {
+    let id: Int
+}
+
+private struct AddRequest: Codable {
+    let dish: Dish
+    let orderId: String
 }
