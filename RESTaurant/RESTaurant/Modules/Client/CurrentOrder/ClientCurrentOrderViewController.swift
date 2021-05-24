@@ -116,11 +116,20 @@ extension ClientCurrentOrderViewController: ClientCurrentOrderView {
         hideActivityIndicatorView()
     }
 
-    func presentFailure(message: String) {
-        presentAlert(withTitle: "Внутренняя ошибка приложения", message: "Сообщение: \(message)")
+    func showClosedOrderAlert() {
+        let alertController = UIAlertController(title: "Заказ закрыт", message: "Благодарим вас за посещение ресторана, будем рады видеть вас снова!", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "До свидания", style: .default) { _ in
+            let storyboard = UIStoryboard(name: GlobalConstants.storyboardMainName, bundle: nil)
+            let clientWorflowVc = storyboard.instantiateViewController(identifier: GlobalConstants.viewControllerMainMenuNavigationController)
+            UIApplication.shared.windows.first?.rootViewController = clientWorflowVc
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 
-    func presentNetworkFailure(errorCode: Int) {
-        presentAlert(withTitle: "Ошибка сервера", message: "Код ошибки: \(errorCode)")
+    func showErrorAlert() {
+        hideActivityIndicatorView()
+        presentAlert(withTitle: "Ошибка", message: "Что-то пошло не так. Попробуйте снова позже")
     }
 }

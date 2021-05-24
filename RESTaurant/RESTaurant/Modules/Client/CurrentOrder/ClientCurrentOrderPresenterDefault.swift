@@ -26,11 +26,11 @@ class ClientCurrentOrderPresenterDefault: ClientCurrentOrderPresenter {
                     let orderResponse = try JSONDecoder().decode(OrderResponse.self, from: response.data)
                     self?.view?.showOrderInfo(info: orderResponse)
                 } catch {
-                    self?.view?.presentNetworkFailure(errorCode: response.statusCode)
+                    self?.view?.showErrorAlert()
                 }
             case let .failure(error):
                 print(error)
-                self?.view?.presentFailure(message: error.localizedDescription)
+                self?.view?.showClosedOrderAlert()
             }
         }
     }

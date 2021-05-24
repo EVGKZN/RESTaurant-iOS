@@ -9,8 +9,8 @@ import Foundation
 
 protocol ClientCurrentOrderView: AnyObject {
     func showOrderInfo(info: OrderResponse)
-    func presentNetworkFailure(errorCode: Int)
-    func presentFailure(message: String)
+    func showErrorAlert()
+    func showClosedOrderAlert()
 }
 
 protocol ClientCurrentOrderPresenter: AnyObject {
