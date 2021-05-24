@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мои заказы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R7-yE-Pde">
-                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <rect key="frame" x="20" y="64" width="374" height="48"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,7 +64,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Свободные заказы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKF-6f-nln">
-                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <rect key="frame" x="20" y="64" width="374" height="48"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,13 +92,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Профиль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1r-ye-aJN">
-                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <rect key="frame" x="20" y="64" width="374" height="48"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNH-GC-1Wr">
-                                <rect key="frame" x="20" y="116" width="374" height="42"/>
+                                <rect key="frame" x="20" y="329.5" width="374" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                 <state key="normal" title="Выйти">
@@ -113,18 +113,63 @@
                                     <action selector="logoutButtonDidPress:" destination="7hO-3k-Mwt" eventType="touchUpInside" id="O1c-pQ-FOT"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="haR-jC-Djb">
+                                <rect key="frame" x="20" y="132" width="374" height="167.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhP-D2-CIv">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSk-7t-24t">
+                                        <rect key="frame" x="0.0" y="33.5" width="374" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Father Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lg8-Ri-8a8">
+                                        <rect key="frame" x="0.0" y="67" width="374" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Giv-Yg-Zb5">
+                                        <rect key="frame" x="0.0" y="100.5" width="374" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoo-UH-eOD">
+                                        <rect key="frame" x="0.0" y="134" width="374" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hSv-k9-ywP"/>
                         <color key="backgroundColor" name="BrandBlue"/>
                         <constraints>
+                            <constraint firstItem="haR-jC-Djb" firstAttribute="leading" secondItem="hSv-k9-ywP" secondAttribute="leading" constant="20" id="35d-ks-JRU"/>
                             <constraint firstItem="ZNH-GC-1Wr" firstAttribute="leading" secondItem="hSv-k9-ywP" secondAttribute="leading" constant="20" id="3WW-Of-WaZ"/>
                             <constraint firstItem="k1r-ye-aJN" firstAttribute="leading" secondItem="hSv-k9-ywP" secondAttribute="leading" constant="20" id="KID-xv-PnX"/>
-                            <constraint firstItem="ZNH-GC-1Wr" firstAttribute="top" secondItem="k1r-ye-aJN" secondAttribute="bottom" constant="10" id="LQb-5R-cpc"/>
+                            <constraint firstItem="ZNH-GC-1Wr" firstAttribute="top" secondItem="haR-jC-Djb" secondAttribute="bottom" constant="30" id="LQb-5R-cpc"/>
+                            <constraint firstItem="hSv-k9-ywP" firstAttribute="trailing" secondItem="haR-jC-Djb" secondAttribute="trailing" constant="20" id="Mlh-Sm-X5E"/>
                             <constraint firstItem="hSv-k9-ywP" firstAttribute="trailing" secondItem="ZNH-GC-1Wr" secondAttribute="trailing" constant="20" id="N0V-yg-q6u"/>
                             <constraint firstItem="hSv-k9-ywP" firstAttribute="trailing" secondItem="k1r-ye-aJN" secondAttribute="trailing" constant="20" id="TAu-vb-a2z"/>
+                            <constraint firstItem="haR-jC-Djb" firstAttribute="top" secondItem="k1r-ye-aJN" secondAttribute="bottom" constant="20" id="flD-dB-pJ1"/>
                             <constraint firstItem="k1r-ye-aJN" firstAttribute="top" secondItem="hSv-k9-ywP" secondAttribute="top" constant="20" id="w7o-KT-mQj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fatherNameLabel" destination="lg8-Ri-8a8" id="V2h-tA-vcd"/>
+                        <outlet property="firstNameLabel" destination="bSk-7t-24t" id="P5y-u6-0KI"/>
+                        <outlet property="lastNameLabel" destination="EhP-D2-CIv" id="GV1-Bk-PRy"/>
+                        <outlet property="restaurantLabel" destination="Giv-Yg-Zb5" id="Lil-BW-vzy"/>
+                        <outlet property="roleLabel" destination="zoo-UH-eOD" id="ysv-Yu-cuA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAk-TI-0cy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

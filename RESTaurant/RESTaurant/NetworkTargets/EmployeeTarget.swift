@@ -47,6 +47,6 @@ extension EmployeeTarget: TargetType {
         if let authorizationResponse = UserDefaultsHelper.getCurrentAuthorizationInfo() {
             token = authorizationResponse.token
         }
-        return ["Accept":"application/json","Authorization":token]
+        return ["Authorization":token]
     }
 }

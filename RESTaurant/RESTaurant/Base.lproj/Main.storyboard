@@ -115,13 +115,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наведите камеру на QR-код" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDY-SZ-d4I">
-                                <rect key="frame" x="24" y="112" width="366" height="95.5"/>
+                                <rect key="frame" x="24" y="112" width="366" height="84"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" name="BrandWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVm-xW-hXs" userLabel="ScannerBackground">
-                                <rect key="frame" x="32" y="231.5" width="350" height="350"/>
+                                <rect key="frame" x="32" y="220" width="350" height="350"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLy-HZ-aNT" customClass="QRScannerView" customModule="RESTaurant" customModuleProvider="target">
                                         <rect key="frame" x="25" y="25" width="300" height="300"/>

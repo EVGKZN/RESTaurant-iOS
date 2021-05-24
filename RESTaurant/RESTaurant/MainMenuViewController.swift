@@ -28,7 +28,20 @@ class MainMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let tableID = UserDefaultsHelper.getCurrentTableID() {
+        if let currentEmployeeInfo = UserDefaultsHelper.getCurrentEmployeeInfo() {
+            switch currentEmployeeInfo.role {
+            case "WAITER":
+                let storyboard = UIStoryboard(name: GlobalConstants.storyboardWaiterWorkflowName, bundle: nil)
+                let waiterWorflowVc = storyboard.instantiateViewController(identifier: GlobalConstants.viewControllerWaiterTabBarName)
+                UIApplication.shared.windows.first?.rootViewController = waiterWorflowVc
+                UIApplication.shared.windows.first?.makeKeyAndVisible()
+            case "COOK":
+                //TODO: Dodelats
+                break
+            default:
+                break
+            }
+        } else if let tableID = UserDefaultsHelper.getCurrentTableID() {
             print(tableID)
             let storyboard = UIStoryboard(name: GlobalConstants.storyboardClientWorkflowName, bundle: nil)
             let clientWorflowVc = storyboard.instantiateViewController(identifier: GlobalConstants.viewControllerClientTabBarName)

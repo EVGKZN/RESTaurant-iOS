@@ -42,6 +42,10 @@ extension OrderTarget: TargetType {
     }
 
     public var headers: [String : String]? {
-        return [:]
+        var token = ""
+        if let authorizationResponse = UserDefaultsHelper.getCurrentAuthorizationInfo() {
+            token = authorizationResponse.token
+        }
+        return ["Authorization":token]
     }
 }

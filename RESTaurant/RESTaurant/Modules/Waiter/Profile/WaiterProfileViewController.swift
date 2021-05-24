@@ -9,22 +9,29 @@ import UIKit
 
 class WaiterProfileViewController: UIViewController {
 
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var fatherNameLabel: UILabel!
+    @IBOutlet weak var restaurantLabel: UILabel!
+    @IBOutlet weak var roleLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupData()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupData() {
+        let employeeInfo = UserDefaultsHelper.getCurrentEmployeeInfo()
+        firstNameLabel.text = employeeInfo?.firstName
+        lastNameLabel.text = employeeInfo?.lastName
+        fatherNameLabel.text = employeeInfo?.fatherName
+        if let restaurantName = employeeInfo?.restaurant.name {
+            restaurantLabel.text = "Заведение: \(restaurantName)"
+        }
+        roleLabel.text = employeeInfo?.role == "WAITER" ? "Роль: Официант" : "Роль: Повар"
     }
-    */
 
     @IBAction func logoutButtonDidPress(_ sender: Any) {
         UserDefaultsHelper.setCurrentAuthorizationInfo(accountInfo: nil)

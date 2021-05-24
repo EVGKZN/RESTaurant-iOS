@@ -13,8 +13,8 @@ class WaiterTabBarController: UITabBarController {
         super.viewDidLoad()
 
         self.tabBar.barTintColor = .white
-        let myOrdersViewController = instantiateViewController(identifier: "WaiterMyOrdersViewController", imageName: "profileGray", selectedImageName: "profileBlue")
-        let freeOrdersViewController = instantiateViewController(identifier: "WaiterFreeOrdersViewController", imageName: "profileGray", selectedImageName: "profileBlue")
+        let myOrdersViewController = instantiateViewController(identifier: "WaiterMyOrdersViewController", imageName: "myOrdersGray", selectedImageName: "myOrdersBlue")
+        let freeOrdersViewController = instantiateViewController(identifier: "WaiterFreeOrdersViewController", imageName: "freeOrdersGray", selectedImageName: "freeOrdersBlue")
         let profileViewController = instantiateViewController(identifier: "WaiterProfileViewController", imageName: "profileGray", selectedImageName: "profileBlue")
         viewControllers = [myOrdersViewController, freeOrdersViewController, profileViewController]
     }
