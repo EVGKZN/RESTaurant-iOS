@@ -67,7 +67,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESk-9y-qdC">
                         <rect key="frame" x="235" y="140" width="30" height="30"/>
                         <color key="tintColor" name="AccentColor"/>
-                        <state key="normal" image="ready"/>
+                        <state key="normal" image="done"/>
                         <connections>
                             <action selector="markPositionAsCookedDidPress:" destination="vY0-cH-h8p" eventType="touchUpInside" id="Rcz-9l-yzK"/>
                         </connections>
@@ -99,8 +99,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="done" width="50" height="50"/>
         <image name="meal" width="512" height="512"/>
-        <image name="ready" width="21" height="21"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
