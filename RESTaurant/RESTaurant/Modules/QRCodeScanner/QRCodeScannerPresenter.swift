@@ -30,7 +30,7 @@ class QRCodeScannerPresenterDefault: QRCodeScannerPresenter {
                 case let .success(response):
                     do {
                         print(response)
-                        UserDefaults.standard.set(tableID, forKey: Constants.userDefaultsCurrentTableIDKey)
+                        UserDefaultsHelper.setCurrentTableID(tableID: tableID)
                         self?.view?.performSuccessfulTableReserving()
                     }
                 case let .failure(error):

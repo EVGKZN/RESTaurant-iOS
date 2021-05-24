@@ -17,7 +17,7 @@ class ClientCurrentOrderPresenterDefault: ClientCurrentOrderPresenter {
     }
 
     func loadOrderInfo() {
-        guard let tableID = UserDefaults.standard.string(forKey: GlobalConstants.userDefaultsCurrentTableIDKey) else { return }
+        guard let tableID = UserDefaultsHelper.getCurrentTableID() else { return }
         orderProvider.request(.getOrderByTableID(tableID: tableID)) { [weak self] (result) in
             switch result {
             case let .success(response):

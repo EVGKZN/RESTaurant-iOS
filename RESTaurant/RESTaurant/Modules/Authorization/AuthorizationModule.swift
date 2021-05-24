@@ -10,7 +10,7 @@ import Foundation
 protocol AuthorizationView: AnyObject {
     func presentNetworkFailure(errorCode: Int)
     func presentFailure(message: String)
-    func presentSuccess(response: AuthorizationResponse)
+    func performSuccessfulAuthorization(response: EmployeeResponse)
 }
 
 protocol AuthorizationPresenter: AnyObject {

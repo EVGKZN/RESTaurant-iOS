@@ -3,13 +3,20 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RedHatDisplay-Bold.ttf">
+            <string>RedHatDisplay-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Waiter Tab Bar Controller-->
         <scene sceneID="l9Z-lG-JvC">
             <objects>
-                <tabBarController id="HJD-Uw-sz6" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="WaiterTabBarController" id="HJD-Uw-sz6" customClass="WaiterTabBarController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b8k-98-4KB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -20,5 +27,113 @@
             </objects>
             <point key="canvasLocation" x="-1823" y="103"/>
         </scene>
+        <!--Waiter My Orders View Controller-->
+        <scene sceneID="3tN-6d-iLW">
+            <objects>
+                <viewController storyboardIdentifier="WaiterMyOrdersViewController" id="uMf-K3-R7F" customClass="WaiterMyOrdersViewController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GoS-2r-pGB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мои заказы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R7-yE-Pde">
+                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C19-JP-uvc"/>
+                        <color key="backgroundColor" name="BrandBlue"/>
+                        <constraints>
+                            <constraint firstItem="8R7-yE-Pde" firstAttribute="leading" secondItem="GoS-2r-pGB" secondAttribute="leading" constant="20" id="v4a-Y7-UWX"/>
+                            <constraint firstItem="C19-JP-uvc" firstAttribute="trailing" secondItem="8R7-yE-Pde" secondAttribute="trailing" constant="20" id="vR5-7n-7TD"/>
+                            <constraint firstItem="8R7-yE-Pde" firstAttribute="top" secondItem="C19-JP-uvc" secondAttribute="top" constant="20" id="wLS-Fi-JDO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWF-F5-675" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2684" y="769"/>
+        </scene>
+        <!--Waiter Free Orders View Controller-->
+        <scene sceneID="rzQ-8s-Y4u">
+            <objects>
+                <viewController storyboardIdentifier="WaiterFreeOrdersViewController" id="wRH-9R-DUk" customClass="WaiterFreeOrdersViewController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y68-oM-dAD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Свободные заказы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKF-6f-nln">
+                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yxc-eo-fWb"/>
+                        <color key="backgroundColor" name="BrandBlue"/>
+                        <constraints>
+                            <constraint firstItem="FKF-6f-nln" firstAttribute="top" secondItem="yxc-eo-fWb" secondAttribute="top" constant="20" id="2GB-9P-dsM"/>
+                            <constraint firstItem="FKF-6f-nln" firstAttribute="leading" secondItem="Y68-oM-dAD" secondAttribute="leading" constant="20" id="dVh-Gp-vgh"/>
+                            <constraint firstItem="yxc-eo-fWb" firstAttribute="trailing" secondItem="FKF-6f-nln" secondAttribute="trailing" constant="20" id="ke6-ZM-zfr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLV-zQ-FvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1804" y="769"/>
+        </scene>
+        <!--Waiter Profile View Controller-->
+        <scene sceneID="IXg-84-uKj">
+            <objects>
+                <viewController storyboardIdentifier="WaiterProfileViewController" id="7hO-3k-Mwt" customClass="WaiterProfileViewController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t30-h4-sVC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Профиль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1r-ye-aJN">
+                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNH-GC-1Wr">
+                                <rect key="frame" x="20" y="116" width="374" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                <state key="normal" title="Выйти">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutButtonDidPress:" destination="7hO-3k-Mwt" eventType="touchUpInside" id="O1c-pQ-FOT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hSv-k9-ywP"/>
+                        <color key="backgroundColor" name="BrandBlue"/>
+                        <constraints>
+                            <constraint firstItem="ZNH-GC-1Wr" firstAttribute="leading" secondItem="hSv-k9-ywP" secondAttribute="leading" constant="20" id="3WW-Of-WaZ"/>
+                            <constraint firstItem="k1r-ye-aJN" firstAttribute="leading" secondItem="hSv-k9-ywP" secondAttribute="leading" constant="20" id="KID-xv-PnX"/>
+                            <constraint firstItem="ZNH-GC-1Wr" firstAttribute="top" secondItem="k1r-ye-aJN" secondAttribute="bottom" constant="10" id="LQb-5R-cpc"/>
+                            <constraint firstItem="hSv-k9-ywP" firstAttribute="trailing" secondItem="ZNH-GC-1Wr" secondAttribute="trailing" constant="20" id="N0V-yg-q6u"/>
+                            <constraint firstItem="hSv-k9-ywP" firstAttribute="trailing" secondItem="k1r-ye-aJN" secondAttribute="trailing" constant="20" id="TAu-vb-a2z"/>
+                            <constraint firstItem="k1r-ye-aJN" firstAttribute="top" secondItem="hSv-k9-ywP" secondAttribute="top" constant="20" id="w7o-KT-mQj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAk-TI-0cy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-917" y="769"/>
+        </scene>
     </scenes>
+    <resources>
+        <namedColor name="BrandBlue">
+            <color red="0.16899999976158142" green="0.24300000071525574" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

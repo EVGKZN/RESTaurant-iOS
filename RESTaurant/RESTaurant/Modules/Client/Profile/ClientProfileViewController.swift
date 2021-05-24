@@ -12,4 +12,7 @@ class ClientProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func techButtonPressed(_ sender: Any) {
+        UserDefaultsHelper.setCurrentTableID(tableID: nil)
+    }
 }

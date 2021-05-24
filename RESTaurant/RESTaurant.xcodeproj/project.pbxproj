@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30146305265A778B00D572D9 /* ClientTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146303265A778B00D572D9 /* ClientTabBarViewController.swift */; };
+		30146305265A778B00D572D9 /* ClientTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146303265A778B00D572D9 /* ClientTabBarController.swift */; };
 		30146308265A77B900D572D9 /* ClientWorkflow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30146307265A77B900D572D9 /* ClientWorkflow.storyboard */; };
 		3014630D265A802B00D572D9 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014630C265A802B00D572D9 /* ClientProfileViewController.swift */; };
 		3014630F265A85BD00D572D9 /* ClientCurrentOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014630E265A85BD00D572D9 /* ClientCurrentOrderViewController.swift */; };
@@ -24,6 +24,13 @@
 		30146326265AD63000D572D9 /* ClientCurrentOrderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146325265AD63000D572D9 /* ClientCurrentOrderModule.swift */; };
 		30146328265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146327265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift */; };
 		3014632B265B091F00D572D9 /* WaiterWorkflow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3014632A265B091F00D572D9 /* WaiterWorkflow.storyboard */; };
+		3014632D265B124B00D572D9 /* EmployeeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014632C265B124B00D572D9 /* EmployeeTarget.swift */; };
+		3014632F265B169300D572D9 /* UITabBarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014632E265B169300D572D9 /* UITabBarController+Extensions.swift */; };
+		30146331265B16F100D572D9 /* WaiterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146330265B16F100D572D9 /* WaiterTabBarController.swift */; };
+		30146333265B17F100D572D9 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146332265B17F100D572D9 /* UserDefaultsHelper.swift */; };
+		30146338265BB64A00D572D9 /* WaiterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146337265BB64A00D572D9 /* WaiterProfileViewController.swift */; };
+		3014633A265BB65500D572D9 /* WaiterFreeOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146339265BB65500D572D9 /* WaiterFreeOrdersViewController.swift */; };
+		3014633C265BB65D00D572D9 /* WaiterMyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014633B265BB65D00D572D9 /* WaiterMyOrdersViewController.swift */; };
 		304F1EA125E1B5C800A86F04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA025E1B5C800A86F04 /* AppDelegate.swift */; };
 		304F1EA325E1B5C800A86F04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */; };
 		304F1EA525E1B5C800A86F04 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA425E1B5C800A86F04 /* MainMenuViewController.swift */; };
@@ -55,7 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		30146303265A778B00D572D9 /* ClientTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarViewController.swift; sourceTree = "<group>"; };
+		30146303265A778B00D572D9 /* ClientTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTabBarController.swift; sourceTree = "<group>"; };
 		30146307265A77B900D572D9 /* ClientWorkflow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientWorkflow.storyboard; sourceTree = "<group>"; };
 		3014630C265A802B00D572D9 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfileViewController.swift; sourceTree = "<group>"; };
 		3014630E265A85BD00D572D9 /* ClientCurrentOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCurrentOrderViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +79,13 @@
 		30146325265AD63000D572D9 /* ClientCurrentOrderModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCurrentOrderModule.swift; sourceTree = "<group>"; };
 		30146327265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCurrentOrderPresenterDefault.swift; sourceTree = "<group>"; };
 		3014632A265B091F00D572D9 /* WaiterWorkflow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WaiterWorkflow.storyboard; sourceTree = "<group>"; };
+		3014632C265B124B00D572D9 /* EmployeeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTarget.swift; sourceTree = "<group>"; };
+		3014632E265B169300D572D9 /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
+		30146330265B16F100D572D9 /* WaiterTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterTabBarController.swift; sourceTree = "<group>"; };
+		30146332265B17F100D572D9 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		30146337265BB64A00D572D9 /* WaiterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterProfileViewController.swift; sourceTree = "<group>"; };
+		30146339265BB65500D572D9 /* WaiterFreeOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterFreeOrdersViewController.swift; sourceTree = "<group>"; };
+		3014633B265BB65D00D572D9 /* WaiterMyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterMyOrdersViewController.swift; sourceTree = "<group>"; };
 		304F1E9D25E1B5C800A86F04 /* RESTaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304F1EA025E1B5C800A86F04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +146,7 @@
 				3014630B265A7FF400D572D9 /* OrderHistory */,
 				3014630A265A7FDD00D572D9 /* CurrentOrder */,
 				30146309265A7FD200D572D9 /* Profile */,
-				30146303265A778B00D572D9 /* ClientTabBarViewController.swift */,
+				30146303265A778B00D572D9 /* ClientTabBarController.swift */,
 				30146307265A77B900D572D9 /* ClientWorkflow.storyboard */,
 			);
 			path = Client;
@@ -177,9 +191,37 @@
 		30146329265B090900D572D9 /* Waiter */ = {
 			isa = PBXGroup;
 			children = (
+				30146336265BB56900D572D9 /* Profile */,
+				30146335265BB56200D572D9 /* FreeOrders */,
+				30146334265BB55600D572D9 /* MyOrders */,
 				3014632A265B091F00D572D9 /* WaiterWorkflow.storyboard */,
+				30146330265B16F100D572D9 /* WaiterTabBarController.swift */,
 			);
 			path = Waiter;
+			sourceTree = "<group>";
+		};
+		30146334265BB55600D572D9 /* MyOrders */ = {
+			isa = PBXGroup;
+			children = (
+				3014633B265BB65D00D572D9 /* WaiterMyOrdersViewController.swift */,
+			);
+			path = MyOrders;
+			sourceTree = "<group>";
+		};
+		30146335265BB56200D572D9 /* FreeOrders */ = {
+			isa = PBXGroup;
+			children = (
+				30146339265BB65500D572D9 /* WaiterFreeOrdersViewController.swift */,
+			);
+			path = FreeOrders;
+			sourceTree = "<group>";
+		};
+		30146336265BB56900D572D9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				30146337265BB64A00D572D9 /* WaiterProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		304F1E9425E1B5C800A86F04 = {
@@ -227,6 +269,7 @@
 				3080105F2649653500373E33 /* AuthorizationTarget.swift */,
 				3014631B265AC03500D572D9 /* TableTarget.swift */,
 				30146323265AD5A900D572D9 /* OrderTarget.swift */,
+				3014632C265B124B00D572D9 /* EmployeeTarget.swift */,
 			);
 			path = NetworkTargets;
 			sourceTree = "<group>";
@@ -283,6 +326,7 @@
 				3080105826495A3800373E33 /* UIApplication+Extensions.swift */,
 				30146317265A9E0C00D572D9 /* UITableView+Extensions.swift */,
 				30146319265A9E2400D572D9 /* UITableViewCell+Extensions.swift */,
+				3014632E265B169300D572D9 /* UITabBarController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,6 +338,7 @@
 				308010542649531300373E33 /* QRScannerView.swift */,
 				30801056264955C500373E33 /* QRData.swift */,
 				308010642649744700373E33 /* BaseViewController.swift */,
+				30146332265B17F100D572D9 /* UserDefaultsHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -444,12 +489,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3014630F265A85BD00D572D9 /* ClientCurrentOrderViewController.swift in Sources */,
+				3014633A265BB65500D572D9 /* WaiterFreeOrdersViewController.swift in Sources */,
 				30146315265A977100D572D9 /* CurrentOrderPositionTableViewCell.swift in Sources */,
 				30146320265AC0C800D572D9 /* QRCodeScannerModule.swift in Sources */,
 				3080105926495A3800373E33 /* UIApplication+Extensions.swift in Sources */,
 				3014630D265A802B00D572D9 /* ClientProfileViewController.swift in Sources */,
 				30F8D7A7264887250072F908 /* AuthorizationViewController.swift in Sources */,
+				3014632D265B124B00D572D9 /* EmployeeTarget.swift in Sources */,
 				30146324265AD5A900D572D9 /* OrderTarget.swift in Sources */,
+				30146338265BB64A00D572D9 /* WaiterProfileViewController.swift in Sources */,
 				30801057264955C500373E33 /* QRData.swift in Sources */,
 				30146322265AD34700D572D9 /* OrderResponse.swift in Sources */,
 				30146326265AD63000D572D9 /* ClientCurrentOrderModule.swift in Sources */,
@@ -459,9 +507,13 @@
 				30F8D7AD26488A580072F908 /* UIViewController+Extensions.swift in Sources */,
 				30146311265A85C700D572D9 /* ClientOrderHistoryViewController.swift in Sources */,
 				30F8D7B426489E4F0072F908 /* QRCodeScannerViewController.swift in Sources */,
+				3014632F265B169300D572D9 /* UITabBarController+Extensions.swift in Sources */,
+				30146333265B17F100D572D9 /* UserDefaultsHelper.swift in Sources */,
 				304F1EA125E1B5C800A86F04 /* AppDelegate.swift in Sources */,
+				30146331265B16F100D572D9 /* WaiterTabBarController.swift in Sources */,
 				3080105D26495FEB00373E33 /* AuthorizationPresenterDefault.swift in Sources */,
-				30146305265A778B00D572D9 /* ClientTabBarViewController.swift in Sources */,
+				30146305265A778B00D572D9 /* ClientTabBarController.swift in Sources */,
+				3014633C265BB65D00D572D9 /* WaiterMyOrdersViewController.swift in Sources */,
 				30146318265A9E0C00D572D9 /* UITableView+Extensions.swift in Sources */,
 				304F1EA325E1B5C800A86F04 /* SceneDelegate.swift in Sources */,
 				30146328265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift in Sources */,

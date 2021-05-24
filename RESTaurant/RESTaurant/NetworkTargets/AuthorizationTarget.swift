@@ -19,7 +19,7 @@ extension AuthorizationTarget: TargetType {
     public var path: String {
         switch self {
         case .signIn:
-            return "/signIn"
+            return "/api/signIn"
         }
     }
 

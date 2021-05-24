@@ -23,7 +23,7 @@
         <!--Main Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuViewController" id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,6 +258,37 @@
                                     <action selector="signUpButtonDidPress:" destination="wqj-zP-PBG" eventType="touchUpInside" id="dHJ-KY-FJ3"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6P2-YI-f5M">
+                                <rect key="frame" x="20" y="631" width="374" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТЕСТОВЫЙ БЛОК" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlZ-i5-6KM">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r37-MF-xjA">
+                                        <rect key="frame" x="0.0" y="20.5" width="374" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDR-1i-wuI">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
+                                                <state key="normal" title="Официант"/>
+                                                <connections>
+                                                    <action selector="setWaiterAuthData:" destination="wqj-zP-PBG" eventType="touchUpInside" id="AZp-fc-1ch"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h42-VW-s70">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="30"/>
+                                                <state key="normal" title="Повар"/>
+                                                <connections>
+                                                    <action selector="setCookerAuthData:" destination="wqj-zP-PBG" eventType="touchUpInside" id="cH2-mF-3J8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandGray"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQq-vm-ja8"/>
                         <color key="backgroundColor" name="BrendWhite"/>
@@ -274,6 +305,7 @@
                             <constraint firstItem="GKM-Us-4NH" firstAttribute="leading" secondItem="fQq-vm-ja8" secondAttribute="leading" constant="24" id="Mr1-AM-QEt"/>
                             <constraint firstItem="W3r-Bh-kiJ" firstAttribute="top" secondItem="C50-ay-NxR" secondAttribute="bottom" id="PSO-eU-9Ar"/>
                             <constraint firstItem="m2D-MV-WsR" firstAttribute="top" secondItem="vMo-qi-7Qt" secondAttribute="bottom" constant="30" id="RVN-Kl-cfO"/>
+                            <constraint firstItem="6P2-YI-f5M" firstAttribute="leading" secondItem="fQq-vm-ja8" secondAttribute="leading" constant="20" id="Rfx-i9-sbI"/>
                             <constraint firstItem="C50-ay-NxR" firstAttribute="centerX" secondItem="ghi-s2-6DM" secondAttribute="centerX" id="UgZ-wk-x89"/>
                             <constraint firstItem="GVB-vm-7co" firstAttribute="top" secondItem="m2D-MV-WsR" secondAttribute="bottom" constant="5" id="Uvd-AF-wzj"/>
                             <constraint firstItem="uKu-Y8-U6y" firstAttribute="leading" secondItem="j5X-gl-hza" secondAttribute="leading" id="brP-jf-HJ9"/>
@@ -281,7 +313,9 @@
                             <constraint firstItem="fQq-vm-ja8" firstAttribute="trailing" secondItem="GKM-Us-4NH" secondAttribute="trailing" constant="24" id="dz8-qB-BeI"/>
                             <constraint firstItem="GVB-vm-7co" firstAttribute="leading" secondItem="m2D-MV-WsR" secondAttribute="leading" id="g5r-i6-umO"/>
                             <constraint firstItem="m2D-MV-WsR" firstAttribute="leading" secondItem="vMo-qi-7Qt" secondAttribute="leading" id="hLu-Yi-NGy"/>
+                            <constraint firstItem="6P2-YI-f5M" firstAttribute="top" secondItem="W3r-Bh-kiJ" secondAttribute="bottom" constant="50" id="jW6-kr-sWA"/>
                             <constraint firstItem="vMo-qi-7Qt" firstAttribute="trailing" secondItem="uKu-Y8-U6y" secondAttribute="trailing" id="mOs-RF-cmN"/>
+                            <constraint firstItem="fQq-vm-ja8" firstAttribute="trailing" secondItem="6P2-YI-f5M" secondAttribute="trailing" constant="20" id="tCB-Bo-baN"/>
                             <constraint firstItem="GKM-Us-4NH" firstAttribute="top" secondItem="zZo-a1-YQE" secondAttribute="bottom" constant="11" id="tfF-1g-UQF"/>
                             <constraint firstItem="uKu-Y8-U6y" firstAttribute="top" secondItem="j5X-gl-hza" secondAttribute="bottom" constant="37" id="uxT-Mg-KmV"/>
                             <constraint firstItem="C50-ay-NxR" firstAttribute="top" secondItem="GKM-Us-4NH" secondAttribute="bottom" constant="18" id="w6d-PJ-eBw"/>
@@ -306,7 +340,7 @@
         <!--Navigation Controller-->
         <scene sceneID="VtM-ei-d8a">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8gI-b1-x3P" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainMenuNavigationControlelr" automaticallyAdjustsScrollViewInsets="NO" id="8gI-b1-x3P" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rzd-2k-zRb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

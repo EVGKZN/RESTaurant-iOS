@@ -73,6 +73,20 @@ class AuthorizationViewController: BaseViewController {
         hideActivityIndicatorView()
         authorizeButton.isUserInteractionEnabled = true
     }
+
+
+    // ДОБАВЛЕНО ДЛЯ УДОБСТВА ТЕСТИРОВАНИЯ
+
+    @IBAction func setWaiterAuthData(_ sender: Any) {
+        emailTextField.text = "VOBuzanov@gmail.com"
+        passwordTextField.text = "123"
+    }
+
+    @IBAction func setCookerAuthData(_ sender: Any) {
+        emailTextField.text = "VOBuzanov234@gmail.com"
+        passwordTextField.text = "123"
+    }
+
 }
 
 extension AuthorizationViewController: AuthorizationView {
@@ -86,8 +100,19 @@ extension AuthorizationViewController: AuthorizationView {
         presentAlert(withTitle: "Ошибка сервера", message: "Код ошибки: \(errorCode)")
     }
 
-    func presentSuccess(response: AuthorizationResponse) {
+    func performSuccessfulAuthorization(response: EmployeeResponse) {
         endLoading()
-        presentAlert(withTitle: "Успешно", message: "Токен: \(response.token)")
+        switch response.role {
+        case "WAITER":
+            let storyboard = UIStoryboard(name: GlobalConstants.storyboardWaiterWorkflowName, bundle: nil)
+            let waiterWorflowVc = storyboard.instantiateViewController(identifier: GlobalConstants.viewControllerWaiterTabBarName)
+            UIApplication.shared.windows.first?.rootViewController = waiterWorflowVc
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        case "COOK":
+            //TODO: Dodelats
+        return
+        default:
+            presentAlert(withTitle: "Ошибка", message: "Функционал в разработке")
+        }
     }
 }

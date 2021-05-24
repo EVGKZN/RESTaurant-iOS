@@ -7,10 +7,12 @@
 
 import Foundation
 import Moya
+import Alamofire
 
 class AuthorizationPresenterDefault: AuthorizationPresenter {
     private weak var view: AuthorizationView?
     private let authorizationProvider = MoyaProvider<AuthorizationTarget>()
+//    private let employeeProvider = MoyaProvider<EmployeeTarget>()
 
     required init(view: AuthorizationView) {
         self.view = view
@@ -24,11 +26,27 @@ class AuthorizationPresenterDefault: AuthorizationPresenter {
                 do {
                     print(response)
                     let authResponse = try JSONDecoder().decode(AuthorizationResponse.self, from: response.data)
-                    let encoder = JSONEncoder()
-                    if let encoded = try? encoder.encode(authResponse) {
-                        UserDefaults.standard.set(encoded, forKey: GlobalConstants.userDefaultsCurrentAccountInfoIDKey)
+                    UserDefaultsHelper.setCurrentAuthorizationInfo(accountInfo: authResponse)
+
+                    let employeeProvider = MoyaProvider<EmployeeTarget>()
+                    employeeProvider.request(.getCurrentEmployee) { [weak self] (result) in
+                        switch result {
+                        case let .success(response):
+                            do {
+                                print(response)
+                                let employeeResponse = try JSONDecoder().decode(EmployeeResponse.self, from: response.data)
+                                UserDefaultsHelper.setCurrentEmployeeInfo(employeeInfo: employeeResponse)
+                                self?.view?.performSuccessfulAuthorization(response: employeeResponse)
+                            } catch {
+                                UserDefaultsHelper.setCurrentAuthorizationInfo(accountInfo: nil)
+                            }
+                        case let .failure(error):
+                            print(error)
+                            UserDefaultsHelper.setCurrentAuthorizationInfo(accountInfo: nil)
+                        }
                     }
-                    self?.view?.presentSuccess(response: authResponse)
+
+
                 } catch {
                     self?.view?.presentNetworkFailure(errorCode: response.statusCode)
                 }

@@ -25,7 +25,7 @@ struct TableResponse: Decodable {
     let number: Int
 }
 
-struct RestaurantResponse: Decodable {
+struct RestaurantResponse: Codable {
     let id: String
     let name: String
     let location: String
@@ -55,7 +55,7 @@ struct MenuResponse: Decodable {
     let restaurant: RestaurantResponse
 }
 
-struct EmployeeResponse: Decodable {
+struct EmployeeResponse: Codable {
     let id: String
     let account: AccountResponse
     let firstName: String

@@ -28,7 +28,7 @@ class MainMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let tableID = UserDefaults.standard.string(forKey: GlobalConstants.userDefaultsCurrentTableIDKey) {
+        if let tableID = UserDefaultsHelper.getCurrentTableID() {
             print(tableID)
             let storyboard = UIStoryboard(name: GlobalConstants.storyboardClientWorkflowName, bundle: nil)
             let clientWorflowVc = storyboard.instantiateViewController(identifier: GlobalConstants.viewControllerClientTabBarName)
