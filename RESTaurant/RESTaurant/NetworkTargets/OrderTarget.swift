@@ -9,6 +9,10 @@ import Moya
 
 public enum OrderTarget {
     case getOrderByTableID(tableID: String)
+    case getOrderByStatus(status: String)
+    case takeOrderByID(orderID: String)
+    case getOrderByID(orderID: String)
+    case getWaiterActiveOrders
 }
 
 extension OrderTarget: TargetType {
@@ -20,13 +24,23 @@ extension OrderTarget: TargetType {
         switch self {
         case .getOrderByTableID:
             return "/api/order/table"
+        case .getOrderByStatus:
+            return "/api/order"
+        case .takeOrderByID:
+            return "/api/order/take"
+        case .getWaiterActiveOrders:
+            return "/api/order/my"
+        case .getOrderByID(let orderID):
+            return "/api/order/\(orderID)"
         }
     }
 
     public var method: Method {
         switch self {
-        case .getOrderByTableID:
+        case .getOrderByTableID, .getOrderByStatus, .getWaiterActiveOrders, .getOrderByID:
             return .get
+        case .takeOrderByID:
+            return .post
         }
     }
 
@@ -38,6 +52,12 @@ extension OrderTarget: TargetType {
         switch self {
         case .getOrderByTableID(let tableID):
             return .requestParameters(parameters: ["tableId" : tableID], encoding: URLEncoding.queryString)
+        case .getOrderByStatus(let status):
+            return .requestParameters(parameters: ["status" : status], encoding: URLEncoding.queryString)
+        case .takeOrderByID(let orderID):
+            return .requestParameters(parameters: ["id" : orderID], encoding: JSONEncoding.default)
+        case .getWaiterActiveOrders, .getOrderByID:
+            return .requestPlain
         }
     }
 
@@ -47,5 +67,9 @@ extension OrderTarget: TargetType {
             token = authorizationResponse.token
         }
         return ["Authorization":token]
+    }
+
+    public var validationType: ValidationType {
+        return .successAndRedirectCodes
     }
 }

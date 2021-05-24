@@ -265,8 +265,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="noPositionsView" destination="j44-U6-4n9" id="zf1-de-lYW"/>
-                        <outlet property="orderContainterView" destination="SGa-bA-WSZ" id="Lrh-bm-1ZA"/>
+                        <outlet property="emptyPositionsView" destination="j44-U6-4n9" id="zf1-de-lYW"/>
+                        <outlet property="orderContainerView" destination="SGa-bA-WSZ" id="Lrh-bm-1ZA"/>
                         <outlet property="orderPositionsTableView" destination="cUO-If-sDK" id="bvN-Ta-9db"/>
                         <outlet property="reservationTimeLabel" destination="9Ic-iA-g2c" id="TP1-3g-n2U"/>
                         <outlet property="tableNumberLabel" destination="Px8-gX-YsD" id="g1k-kH-yhG"/>

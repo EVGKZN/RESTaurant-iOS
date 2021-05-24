@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -35,25 +36,279 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="clU-7U-AKy">
+                                <rect key="frame" x="0.0" y="170" width="414" height="692"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мои заказы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R7-yE-Pde">
-                                <rect key="frame" x="20" y="64" width="374" height="48"/>
+                                <rect key="frame" x="20" y="108" width="374" height="42"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0M-z0-Gnf">
+                                <rect key="frame" x="0.0" y="170" width="414" height="692"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9EK-PK-RlY">
+                                        <rect key="frame" x="44" y="232" width="326.5" height="228.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В данный момент у вас нет активных заказов" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spG-Ao-lVE">
+                                                <rect key="frame" x="0.0" y="0.0" width="326.5" height="58.5"/>
+                                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                                <color key="textColor" name="BrandGrayText"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="9ZD-Lt-bVT">
+                                                <rect key="frame" x="88" y="68.5" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="M9e-oH-axD"/>
+                                                    <constraint firstAttribute="height" constant="150" id="O8m-ZM-oe8"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="9ZD-Lt-bVT" firstAttribute="top" secondItem="spG-Ao-lVE" secondAttribute="bottom" constant="10" id="0kj-5Y-PEQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="spG-Ao-lVE" secondAttribute="trailing" id="AL0-jA-RVB"/>
+                                            <constraint firstItem="spG-Ao-lVE" firstAttribute="leading" secondItem="9EK-PK-RlY" secondAttribute="leading" id="B6u-88-Ags"/>
+                                            <constraint firstItem="9ZD-Lt-bVT" firstAttribute="centerX" secondItem="9EK-PK-RlY" secondAttribute="centerX" id="Jva-Wc-xjp"/>
+                                            <constraint firstAttribute="bottom" secondItem="9ZD-Lt-bVT" secondAttribute="bottom" constant="10" id="ffI-ZK-aDl"/>
+                                            <constraint firstItem="spG-Ao-lVE" firstAttribute="top" secondItem="9EK-PK-RlY" secondAttribute="top" id="uK4-Om-d2c"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1Q-r7-2e5">
+                                        <rect key="frame" x="172" y="465.5" width="70" height="30"/>
+                                        <state key="normal" title="Обновить"/>
+                                        <connections>
+                                            <action selector="updateDataDidPress:" destination="uMf-K3-R7F" eventType="touchUpInside" id="1da-8Z-9d3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9EK-PK-RlY" firstAttribute="centerY" secondItem="z0M-z0-Gnf" secondAttribute="centerY" id="2tC-Bx-7mV"/>
+                                    <constraint firstItem="h1Q-r7-2e5" firstAttribute="top" secondItem="9EK-PK-RlY" secondAttribute="bottom" constant="5" id="4hY-3F-Np3"/>
+                                    <constraint firstItem="9EK-PK-RlY" firstAttribute="centerX" secondItem="z0M-z0-Gnf" secondAttribute="centerX" id="EKb-wL-5Db"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9EK-PK-RlY" secondAttribute="trailing" constant="20" id="OTL-4I-pNA"/>
+                                    <constraint firstItem="9EK-PK-RlY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z0M-z0-Gnf" secondAttribute="leading" constant="20" id="QNu-MT-gxZ"/>
+                                    <constraint firstItem="h1Q-r7-2e5" firstAttribute="centerX" secondItem="9EK-PK-RlY" secondAttribute="centerX" id="hie-40-i2r"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C19-JP-uvc"/>
                         <color key="backgroundColor" name="BrandBlue"/>
                         <constraints>
+                            <constraint firstItem="z0M-z0-Gnf" firstAttribute="leading" secondItem="C19-JP-uvc" secondAttribute="leading" id="9SB-AU-fFY"/>
+                            <constraint firstItem="clU-7U-AKy" firstAttribute="top" secondItem="z0M-z0-Gnf" secondAttribute="top" id="OUC-ZU-Ceg"/>
+                            <constraint firstItem="clU-7U-AKy" firstAttribute="bottom" secondItem="z0M-z0-Gnf" secondAttribute="bottom" id="Wla-ig-6DD"/>
+                            <constraint firstItem="clU-7U-AKy" firstAttribute="leading" secondItem="z0M-z0-Gnf" secondAttribute="leading" id="Yjv-dZ-EF2"/>
+                            <constraint firstItem="z0M-z0-Gnf" firstAttribute="top" secondItem="8R7-yE-Pde" secondAttribute="bottom" constant="20" id="cmZ-zm-x0c"/>
+                            <constraint firstItem="z0M-z0-Gnf" firstAttribute="trailing" secondItem="C19-JP-uvc" secondAttribute="trailing" id="hDH-Nz-Hha"/>
+                            <constraint firstItem="clU-7U-AKy" firstAttribute="trailing" secondItem="z0M-z0-Gnf" secondAttribute="trailing" id="tan-3N-rNU"/>
+                            <constraint firstItem="C19-JP-uvc" firstAttribute="bottom" secondItem="z0M-z0-Gnf" secondAttribute="bottom" id="upf-kU-6eS"/>
                             <constraint firstItem="8R7-yE-Pde" firstAttribute="leading" secondItem="GoS-2r-pGB" secondAttribute="leading" constant="20" id="v4a-Y7-UWX"/>
                             <constraint firstItem="C19-JP-uvc" firstAttribute="trailing" secondItem="8R7-yE-Pde" secondAttribute="trailing" constant="20" id="vR5-7n-7TD"/>
                             <constraint firstItem="8R7-yE-Pde" firstAttribute="top" secondItem="C19-JP-uvc" secondAttribute="top" constant="20" id="wLS-Fi-JDO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BXr-Nm-d4q"/>
+                    <connections>
+                        <outlet property="emptyView" destination="z0M-z0-Gnf" id="Y7A-Vv-0w9"/>
+                        <outlet property="myOrdersTableView" destination="clU-7U-AKy" id="aqF-YW-wiC"/>
+                        <segue destination="f4q-bY-mxL" kind="show" identifier="toOrderDetailSegue" id="xpr-rY-Wy0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWF-F5-675" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2684" y="769"/>
+            <point key="canvasLocation" x="-1773.913043478261" y="768.75"/>
+        </scene>
+        <!--Order Detail View Controller-->
+        <scene sceneID="xYU-pN-evA">
+            <objects>
+                <viewController id="f4q-bY-mxL" customClass="OrderDetailViewController" customModule="RESTaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="guK-U7-KBy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TableNumber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBD-nJ-J0W">
+                                <rect key="frame" x="20" y="88" width="374" height="42"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="rK6-O4-63U">
+                                <rect key="frame" x="20" y="150" width="374" height="42"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AxI-AN-Dvd">
+                                        <rect key="frame" x="151.5" y="0.0" width="222.5" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время бронирования:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaz-Hd-EIE">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="21"/>
+                                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcU-So-mt6">
+                                                <rect key="frame" x="192" y="0.0" width="30.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PLp-O6-vQU">
+                                        <rect key="frame" x="188.5" y="21" width="185.5" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество мест:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRL-jz-VkX">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+                                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64p-tR-IuK">
+                                                <rect key="frame" x="155" y="0.0" width="30.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chP-rP-PJt">
+                                <rect key="frame" x="0.0" y="196" width="370" height="700"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Oxq-is-HJl">
+                                        <rect key="frame" x="20" y="4" width="330" height="29.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qUE-YT-ndK">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="29.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итог:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1f-th-t3x">
+                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="29.5"/>
+                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHN-yu-HRj">
+                                                        <rect key="frame" x="67" y="0.0" width="42" height="29.5"/>
+                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDK-Pj-9Cf" userLabel="separatorView">
+                                        <rect key="frame" x="20" y="37.5" width="330" height="1"/>
+                                        <color key="backgroundColor" name="BrandGray"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Rvr-IT-8fL"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Y-ef-M5h">
+                                        <rect key="frame" x="0.0" y="42.5" width="370" height="657.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Y2Y-ef-M5h" secondAttribute="trailing" id="2rK-nv-0Qy"/>
+                                    <constraint firstItem="Y2Y-ef-M5h" firstAttribute="top" secondItem="CDK-Pj-9Cf" secondAttribute="bottom" constant="4" id="4Jx-TU-54i"/>
+                                    <constraint firstItem="Y2Y-ef-M5h" firstAttribute="leading" secondItem="chP-rP-PJt" secondAttribute="leading" id="4aG-Bb-mhT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y2Y-ef-M5h" secondAttribute="bottom" id="F1b-W6-hPp"/>
+                                    <constraint firstItem="CDK-Pj-9Cf" firstAttribute="leading" secondItem="chP-rP-PJt" secondAttribute="leading" constant="20" id="Pnt-5V-9kt"/>
+                                    <constraint firstItem="Oxq-is-HJl" firstAttribute="top" secondItem="chP-rP-PJt" secondAttribute="top" constant="4" id="TKC-Kk-8vd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oxq-is-HJl" secondAttribute="trailing" constant="20" id="jeq-Oh-Q4U"/>
+                                    <constraint firstAttribute="trailing" secondItem="CDK-Pj-9Cf" secondAttribute="trailing" constant="20" id="nsU-KW-94N"/>
+                                    <constraint firstItem="CDK-Pj-9Cf" firstAttribute="top" secondItem="Oxq-is-HJl" secondAttribute="bottom" constant="4" id="vLm-4X-cXg"/>
+                                    <constraint firstItem="Oxq-is-HJl" firstAttribute="leading" secondItem="chP-rP-PJt" secondAttribute="leading" constant="20" id="w1D-lc-pW9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9d-mW-F9n">
+                                <rect key="frame" x="0.0" y="196" width="370" height="700"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XH3-a2-M8m">
+                                        <rect key="frame" x="56.5" y="236" width="257" height="228.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Клиенты пока ничего не заказали" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-75-eHY">
+                                                <rect key="frame" x="0.0" y="0.0" width="257" height="58.5"/>
+                                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                                <color key="textColor" name="BrandGrayText"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noPositions" translatesAutoresizingMaskIntoConstraints="NO" id="ZyZ-Ai-THR">
+                                                <rect key="frame" x="53.5" y="68.5" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="K6d-Um-VdN"/>
+                                                    <constraint firstAttribute="width" constant="150" id="PwP-0q-OMM"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ZyZ-Ai-THR" firstAttribute="centerX" secondItem="XH3-a2-M8m" secondAttribute="centerX" id="6xf-S7-TZi"/>
+                                            <constraint firstItem="ifg-75-eHY" firstAttribute="top" secondItem="XH3-a2-M8m" secondAttribute="top" id="KoD-6T-uDh"/>
+                                            <constraint firstAttribute="trailing" secondItem="ifg-75-eHY" secondAttribute="trailing" id="Mwn-nu-Ro3"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZyZ-Ai-THR" secondAttribute="bottom" constant="10" id="avH-1R-qNH"/>
+                                            <constraint firstItem="ifg-75-eHY" firstAttribute="leading" secondItem="XH3-a2-M8m" secondAttribute="leading" id="f6u-u6-pqA"/>
+                                            <constraint firstItem="ZyZ-Ai-THR" firstAttribute="top" secondItem="ifg-75-eHY" secondAttribute="bottom" constant="10" id="kpb-GY-eZE"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhN-9x-6vz">
+                                        <rect key="frame" x="150" y="459.5" width="70" height="30"/>
+                                        <state key="normal" title="Обновить"/>
+                                        <connections>
+                                            <action selector="updateButtonDidPress:" destination="f4q-bY-mxL" eventType="touchUpInside" id="xdC-dV-3Zc"/>
+                                            <action selector="updateDataDidPress:" destination="uMf-K3-R7F" eventType="touchUpInside" id="nHG-uw-0dn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XH3-a2-M8m" firstAttribute="centerY" secondItem="I9d-mW-F9n" secondAttribute="centerY" id="0Js-5K-gQ1"/>
+                                    <constraint firstItem="yhN-9x-6vz" firstAttribute="top" secondItem="ZyZ-Ai-THR" secondAttribute="bottom" constant="5" id="1gz-Jq-pZx"/>
+                                    <constraint firstItem="XH3-a2-M8m" firstAttribute="centerX" secondItem="I9d-mW-F9n" secondAttribute="centerX" id="WWT-gP-YEx"/>
+                                    <constraint firstItem="yhN-9x-6vz" firstAttribute="centerX" secondItem="ZyZ-Ai-THR" secondAttribute="centerX" id="bx3-F0-Fef"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XH3-a2-M8m" secondAttribute="trailing" constant="20" id="hAU-MT-7Cx"/>
+                                    <constraint firstItem="XH3-a2-M8m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I9d-mW-F9n" secondAttribute="leading" constant="20" id="xpK-ZJ-CX2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IJ8-3n-BhF"/>
+                        <color key="backgroundColor" name="BrandBlue"/>
+                        <constraints>
+                            <constraint firstItem="IJ8-3n-BhF" firstAttribute="trailing" secondItem="jBD-nJ-J0W" secondAttribute="trailing" constant="20" id="1WQ-JY-k3P"/>
+                            <constraint firstItem="I9d-mW-F9n" firstAttribute="top" secondItem="chP-rP-PJt" secondAttribute="top" id="1gO-r9-v7a"/>
+                            <constraint firstItem="IJ8-3n-BhF" firstAttribute="trailing" secondItem="chP-rP-PJt" secondAttribute="trailing" constant="44" id="2FB-xh-Bji"/>
+                            <constraint firstItem="chP-rP-PJt" firstAttribute="leading" secondItem="guK-U7-KBy" secondAttribute="leading" id="79f-uc-iaL"/>
+                            <constraint firstAttribute="bottom" secondItem="chP-rP-PJt" secondAttribute="bottom" id="7GF-Ac-jg2"/>
+                            <constraint firstItem="chP-rP-PJt" firstAttribute="top" secondItem="rK6-O4-63U" secondAttribute="bottom" constant="4" id="F8q-Bp-M3a"/>
+                            <constraint firstItem="jBD-nJ-J0W" firstAttribute="leading" secondItem="IJ8-3n-BhF" secondAttribute="leading" constant="20" id="Kev-rq-7In"/>
+                            <constraint firstItem="rK6-O4-63U" firstAttribute="leading" secondItem="IJ8-3n-BhF" secondAttribute="leading" constant="20" id="R5d-75-dc2"/>
+                            <constraint firstItem="IJ8-3n-BhF" firstAttribute="trailing" secondItem="rK6-O4-63U" secondAttribute="trailing" constant="20" id="Xf1-RH-vSi"/>
+                            <constraint firstItem="I9d-mW-F9n" firstAttribute="bottom" secondItem="chP-rP-PJt" secondAttribute="bottom" id="YHE-Nu-UQZ"/>
+                            <constraint firstItem="jBD-nJ-J0W" firstAttribute="top" secondItem="IJ8-3n-BhF" secondAttribute="top" id="j3u-Sv-YyO"/>
+                            <constraint firstItem="I9d-mW-F9n" firstAttribute="leading" secondItem="chP-rP-PJt" secondAttribute="leading" id="jq7-bY-9tD"/>
+                            <constraint firstItem="rK6-O4-63U" firstAttribute="top" secondItem="jBD-nJ-J0W" secondAttribute="bottom" constant="20" id="tVk-UO-Ak1"/>
+                            <constraint firstItem="I9d-mW-F9n" firstAttribute="trailing" secondItem="chP-rP-PJt" secondAttribute="trailing" id="z0t-ko-cf8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jxv-hH-rpE"/>
+                    <connections>
+                        <outlet property="emptyPositionsView" destination="I9d-mW-F9n" id="Zm9-i3-AGI"/>
+                        <outlet property="orderContainerView" destination="chP-rP-PJt" id="S5c-pj-s91"/>
+                        <outlet property="orderPositionsTableView" destination="Y2Y-ef-M5h" id="eeg-U1-nYi"/>
+                        <outlet property="reservationTimeLabel" destination="lcU-So-mt6" id="XEQ-Fz-LDY"/>
+                        <outlet property="seatCounterLabel" destination="64p-tR-IuK" id="jMj-LZ-eCz"/>
+                        <outlet property="tableNumberLabel" destination="jBD-nJ-J0W" id="Iuc-vy-9lU"/>
+                        <outlet property="totalAmountLabel" destination="oHN-yu-HRj" id="NZa-eR-c1u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VNN-Vw-vrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2690" y="1459"/>
         </scene>
         <!--Waiter Free Orders View Controller-->
         <scene sceneID="rzQ-8s-Y4u">
@@ -63,25 +318,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Свободные заказы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKF-6f-nln">
-                                <rect key="frame" x="20" y="64" width="374" height="48"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fLc-mr-gEb">
+                                <rect key="frame" x="0.0" y="126" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Свободные заказы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKF-6f-nln">
+                                <rect key="frame" x="20" y="64" width="374" height="42"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnJ-9T-thA">
+                                <rect key="frame" x="0.0" y="126" width="414" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2f-Hv-ZMS">
+                                        <rect key="frame" x="55.5" y="254" width="303" height="228.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Свободных заказов пока что нет" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1B-vv-1sp">
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="58.5"/>
+                                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                                <color key="textColor" name="BrandGrayText"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="PBX-iF-851">
+                                                <rect key="frame" x="76.5" y="68.5" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="Saw-5g-nBS"/>
+                                                    <constraint firstAttribute="width" constant="150" id="bIa-iO-8c4"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="PBX-iF-851" firstAttribute="centerX" secondItem="a2f-Hv-ZMS" secondAttribute="centerX" id="JVT-3n-gv8"/>
+                                            <constraint firstAttribute="bottom" secondItem="PBX-iF-851" secondAttribute="bottom" constant="10" id="Jcx-Dq-7XO"/>
+                                            <constraint firstAttribute="trailing" secondItem="a1B-vv-1sp" secondAttribute="trailing" id="Ke2-Aj-NkY"/>
+                                            <constraint firstItem="PBX-iF-851" firstAttribute="top" secondItem="a1B-vv-1sp" secondAttribute="bottom" constant="10" id="P5y-ak-OTo"/>
+                                            <constraint firstItem="a1B-vv-1sp" firstAttribute="top" secondItem="a2f-Hv-ZMS" secondAttribute="top" id="WU5-Bv-n27"/>
+                                            <constraint firstItem="a1B-vv-1sp" firstAttribute="leading" secondItem="a2f-Hv-ZMS" secondAttribute="leading" id="zIs-Ew-5xi"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZS-Pg-A4E">
+                                        <rect key="frame" x="172" y="490" width="70" height="30"/>
+                                        <state key="normal" title="Обновить"/>
+                                        <connections>
+                                            <action selector="updateDataDidPress:" destination="wRH-9R-DUk" eventType="touchUpInside" id="Fwy-bD-4Cm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="a2f-Hv-ZMS" firstAttribute="centerX" secondItem="VnJ-9T-thA" secondAttribute="centerX" id="Fbb-2x-5dY"/>
+                                    <constraint firstItem="rZS-Pg-A4E" firstAttribute="top" secondItem="a2f-Hv-ZMS" secondAttribute="bottom" constant="7.5" id="OxP-PA-uP2"/>
+                                    <constraint firstItem="a2f-Hv-ZMS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VnJ-9T-thA" secondAttribute="leading" constant="20" id="fD9-ps-Hb1"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="a2f-Hv-ZMS" secondAttribute="trailing" constant="20" id="lyl-PM-h7h"/>
+                                    <constraint firstItem="a2f-Hv-ZMS" firstAttribute="centerY" secondItem="VnJ-9T-thA" secondAttribute="centerY" id="nyl-Xf-6Wa"/>
+                                    <constraint firstItem="rZS-Pg-A4E" firstAttribute="centerX" secondItem="a2f-Hv-ZMS" secondAttribute="centerX" id="yKb-GK-8AM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yxc-eo-fWb"/>
                         <color key="backgroundColor" name="BrandBlue"/>
                         <constraints>
+                            <constraint firstItem="fLc-mr-gEb" firstAttribute="leading" secondItem="VnJ-9T-thA" secondAttribute="leading" id="0yf-8d-1wV"/>
                             <constraint firstItem="FKF-6f-nln" firstAttribute="top" secondItem="yxc-eo-fWb" secondAttribute="top" constant="20" id="2GB-9P-dsM"/>
+                            <constraint firstItem="VnJ-9T-thA" firstAttribute="top" secondItem="FKF-6f-nln" secondAttribute="bottom" constant="20" id="2TM-O1-hMK"/>
+                            <constraint firstItem="VnJ-9T-thA" firstAttribute="leading" secondItem="yxc-eo-fWb" secondAttribute="leading" id="EMe-cb-M6k"/>
+                            <constraint firstItem="fLc-mr-gEb" firstAttribute="top" secondItem="VnJ-9T-thA" secondAttribute="top" id="NJX-tj-h8r"/>
+                            <constraint firstItem="yxc-eo-fWb" firstAttribute="bottom" secondItem="VnJ-9T-thA" secondAttribute="bottom" id="OQu-Y1-JpM"/>
+                            <constraint firstItem="fLc-mr-gEb" firstAttribute="bottom" secondItem="VnJ-9T-thA" secondAttribute="bottom" id="PJF-dt-gwp"/>
                             <constraint firstItem="FKF-6f-nln" firstAttribute="leading" secondItem="Y68-oM-dAD" secondAttribute="leading" constant="20" id="dVh-Gp-vgh"/>
+                            <constraint firstItem="fLc-mr-gEb" firstAttribute="trailing" secondItem="VnJ-9T-thA" secondAttribute="trailing" id="i2t-Pp-umQ"/>
+                            <constraint firstItem="yxc-eo-fWb" firstAttribute="trailing" secondItem="VnJ-9T-thA" secondAttribute="trailing" id="j8l-FO-lYI"/>
                             <constraint firstItem="yxc-eo-fWb" firstAttribute="trailing" secondItem="FKF-6f-nln" secondAttribute="trailing" constant="20" id="ke6-ZM-zfr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emptyOrdersView" destination="VnJ-9T-thA" id="XQ6-gR-i39"/>
+                        <outlet property="freeOrdersTableView" destination="fLc-mr-gEb" id="9lH-oV-q6Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLV-zQ-FvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1804" y="769"/>
+            <point key="canvasLocation" x="-894.20289855072474" y="768.75"/>
         </scene>
         <!--Waiter Profile View Controller-->
         <scene sceneID="IXg-84-uKj">
@@ -92,13 +411,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Профиль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1r-ye-aJN">
-                                <rect key="frame" x="20" y="64" width="374" height="48"/>
+                                <rect key="frame" x="20" y="64" width="374" height="42"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNH-GC-1Wr">
-                                <rect key="frame" x="20" y="329.5" width="374" height="46"/>
+                                <rect key="frame" x="20" y="303.5" width="374" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                 <state key="normal" title="Выйти">
@@ -114,34 +433,34 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="haR-jC-Djb">
-                                <rect key="frame" x="20" y="132" width="374" height="167.5"/>
+                                <rect key="frame" x="20" y="126" width="374" height="147.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhP-D2-CIv">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="29.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSk-7t-24t">
-                                        <rect key="frame" x="0.0" y="33.5" width="374" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="374" height="29.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Father Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lg8-Ri-8a8">
-                                        <rect key="frame" x="0.0" y="67" width="374" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="59" width="374" height="29.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Giv-Yg-Zb5">
-                                        <rect key="frame" x="0.0" y="100.5" width="374" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="88.5" width="374" height="29.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoo-UH-eOD">
-                                        <rect key="frame" x="0.0" y="134" width="374" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="118" width="374" height="29.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,12 +492,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAk-TI-0cy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-917" y="769"/>
+            <point key="canvasLocation" x="-7.2463768115942031" y="768.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n4F-D5-YUx">
+            <objects>
+                <navigationController storyboardIdentifier="WaiterMyOrdersNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="iuO-TE-1lM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u1k-DV-wbE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uMf-K3-R7F" kind="relationship" relationship="rootViewController" id="1Xm-TX-4er"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0UL-mA-tOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2684.057971014493" y="768.75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="empty" width="150" height="150"/>
+        <image name="noPositions" width="150" height="150"/>
         <namedColor name="BrandBlue">
             <color red="0.16899999976158142" green="0.24300000071525574" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="BrandGray">
+            <color red="0.66699999570846558" green="0.66699999570846558" blue="0.66699999570846558" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandGrayText">
+            <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

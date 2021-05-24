@@ -12,10 +12,10 @@ class ClientCurrentOrderViewController: BaseViewController {
     @IBOutlet weak var tableNumberLabel: UILabel!
     @IBOutlet weak var reservationTimeLabel: UILabel!
     @IBOutlet weak var waiterNameLabel: UILabel!
-    @IBOutlet weak var orderContainterView: UIView!
+    @IBOutlet weak var orderContainerView: UIView!
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var orderPositionsTableView: UITableView!
-    @IBOutlet weak var noPositionsView: UIView!
+    @IBOutlet weak var emptyPositionsView: UIView!
     
     private let presenter: ClientCurrentOrderPresenter = ClientCurrentOrderPresenterDefault()
     private var orderInfo: OrderResponse? = nil
@@ -28,8 +28,8 @@ class ClientCurrentOrderViewController: BaseViewController {
         setupOrderContainerView()
         setupOrderPositionsTableView()
         setupRefreshControl()
-        noPositionsView.isHidden = false
-        orderContainterView.isHidden = true
+        emptyPositionsView.isHidden = false
+        orderContainerView.isHidden = true
         presenter.loadOrderInfo()
         showActivityIndicatorView()
     }
@@ -37,46 +37,34 @@ class ClientCurrentOrderViewController: BaseViewController {
     private func setupData() {
         if let orderInfo = orderInfo {
             if orderInfo.positions.isEmpty {
-                noPositionsView.isHidden = false
-                orderContainterView.isHidden = true
+                emptyPositionsView.isHidden = false
+                orderContainerView.isHidden = true
             } else {
                 var totalAmount: Int = 0
                 for position in orderInfo.positions {
                     totalAmount += position.dish.cost
                 }
                 totalAmountLabel.text = "\(totalAmount) руб."
-                noPositionsView.isHidden = true
-                orderContainterView.isHidden = false
+                emptyPositionsView.isHidden = true
+                orderContainerView.isHidden = false
 
                 if let employee = orderInfo.employee {
                     self.waiterNameLabel.text = "\(employee.firstName) \(employee.lastName)"
                 }
                 tableNumberLabel.text = "\(orderInfo.table.number)"
-
-                let fromDateFormatter = ISO8601DateFormatter()
-                if let fromIndex = orderInfo.createTime.firstIndex(of: "."), let toIndex = orderInfo.createTime.firstIndex(of: "+") {
-                    var normalizedStringDate = orderInfo.createTime
-                    normalizedStringDate.removeSubrange(fromIndex..<toIndex)
-                    if let date = fromDateFormatter.date(from: normalizedStringDate) {
-                        let toDateFormatter = DateFormatter()
-                        toDateFormatter.timeZone = TimeZone(abbreviation: "GMT")
-                        toDateFormatter.dateFormat = "HH:mm"
-                        let dateString = toDateFormatter.string(from: date)
-                        reservationTimeLabel.text = dateString
-                    }
-                }
+                reservationTimeLabel.text = DateFormatterHelper.getHoursAndMinutedFromDate(date: orderInfo.createTime)
             }
         } else {
-            noPositionsView.isHidden = false
-            orderContainterView.isHidden = true
+            emptyPositionsView.isHidden = false
+            orderContainerView.isHidden = true
         }
     }
 
     private func setupOrderContainerView() {
-        orderContainterView.layer.cornerRadius = 20
-        orderContainterView.layer.maskedCorners = .layerMaxXMinYCorner
-        noPositionsView.layer.cornerRadius = 20
-        noPositionsView.layer.maskedCorners = .layerMaxXMinYCorner
+        orderContainerView.layer.cornerRadius = 20
+        orderContainerView.layer.maskedCorners = .layerMaxXMinYCorner
+        emptyPositionsView.layer.cornerRadius = 20
+        emptyPositionsView.layer.maskedCorners = .layerMaxXMinYCorner
     }
 
     private func setupOrderPositionsTableView() {

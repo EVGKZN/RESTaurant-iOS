@@ -12,14 +12,13 @@ import Alamofire
 class AuthorizationPresenterDefault: AuthorizationPresenter {
     private weak var view: AuthorizationView?
     private let authorizationProvider = MoyaProvider<AuthorizationTarget>()
-//    private let employeeProvider = MoyaProvider<EmployeeTarget>()
+    private let employeeProvider = MoyaProvider<EmployeeTarget>()
 
     required init(view: AuthorizationView) {
         self.view = view
     }
 
     func performAuthorization(email: String, password: String) {
-        print("EMAIL : \(email), PASSWORD : \(password)")
         authorizationProvider.request(.signIn(email: email, password: password)) { [weak self] (result) in
             switch result {
             case let .success(response):
@@ -27,9 +26,7 @@ class AuthorizationPresenterDefault: AuthorizationPresenter {
                     print(response)
                     let authResponse = try JSONDecoder().decode(AuthorizationResponse.self, from: response.data)
                     UserDefaultsHelper.setCurrentAuthorizationInfo(accountInfo: authResponse)
-
-                    let employeeProvider = MoyaProvider<EmployeeTarget>()
-                    employeeProvider.request(.getCurrentEmployee) { [weak self] (result) in
+                    self?.employeeProvider.request(.getCurrentEmployee) { [weak self] (result) in
                         switch result {
                         case let .success(response):
                             do {
@@ -45,8 +42,6 @@ class AuthorizationPresenterDefault: AuthorizationPresenter {
                             UserDefaultsHelper.setCurrentAuthorizationInfo(accountInfo: nil)
                         }
                     }
-
-
                 } catch {
                     self?.view?.presentNetworkFailure(errorCode: response.statusCode)
                 }
