@@ -14,11 +14,13 @@ public class GlobalConstants {
     static let storyboardMainName = "Main"
     static let storyboardClientWorkflowName = "ClientWorkflow"
     static let storyboardWaiterWorkflowName = "WaiterWorkflow"
+    static let storyboardCookerWorkflowName = "CookerWorkflow"
 
     static let viewControllerClientTabBarName = "ClientTabBarController"
     static let viewControllerMainMenuViewControllerName = "MainMenuViewController"
     static let viewControllerWaiterTabBarName = "WaiterTabBarController"
     static let viewControllerMainMenuNavigationController = "MainMenuNavigationControlelr"
+    static let viewControllerCookerTabBarName = "CookerTabBarController"
 
     static let errorTitle = "Ошибка"
 

@@ -24,13 +24,13 @@ class WaiterMyOrdersViewController: BaseViewController {
         setupData()
         setupRefreshControl()
         presenter.attachView(view: self)
-        presenter.loadMyOrders()
-        showActivityIndicatorView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        showActivityIndicatorView()
+        presenter.loadMyOrders()
         navigationController?.navigationBar.isHidden = true
     }
 

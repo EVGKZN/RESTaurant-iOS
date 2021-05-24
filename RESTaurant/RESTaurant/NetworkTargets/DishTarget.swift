@@ -49,4 +49,8 @@ extension DishTarget: TargetType {
         }
         return ["Authorization":token]
     }
+
+    public var validationType: ValidationType {
+        return .successAndRedirectCodes
+    }
 }

@@ -20,6 +20,7 @@ class OrderDetailViewController: BaseViewController {
     private var order: OrderResponse?
     private let presenter: OrderDetailPresenter = OrderDetailPresenterDefault()
     private let refreshControl = UIRefreshControl()
+    private var hasAlreadyBeenPresented: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,17 @@ class OrderDetailViewController: BaseViewController {
         setupData()
         setupOrderContainerView()
         setupRefreshControl()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if hasAlreadyBeenPresented {
+            showActivityIndicatorView()
+            updateData()
+        } else {
+            hasAlreadyBeenPresented.toggle()
+        }
     }
 
     private func setupNavigationController() {

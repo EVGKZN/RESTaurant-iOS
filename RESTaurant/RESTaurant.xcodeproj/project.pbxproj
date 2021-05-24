@@ -53,6 +53,19 @@
 		3014636B265C222100D572D9 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30146369265C222100D572D9 /* MenuTableViewCell.xib */; };
 		3014636D265C29ED00D572D9 /* MenuTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014636C265C29ED00D572D9 /* MenuTarget.swift */; };
 		3014636F265C2AAB00D572D9 /* DishTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014636E265C2AAB00D572D9 /* DishTarget.swift */; };
+		30146372265C4AF200D572D9 /* CookerWorkflow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30146371265C4AF200D572D9 /* CookerWorkflow.storyboard */; };
+		30146374265C4B1A00D572D9 /* CookerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146373265C4B1A00D572D9 /* CookerTabBarController.swift */; };
+		3014637A265C4BC900D572D9 /* CookerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146379265C4BC900D572D9 /* CookerProfileViewController.swift */; };
+		3014637C265C4BD500D572D9 /* CookerFreePositionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014637B265C4BD500D572D9 /* CookerFreePositionsViewController.swift */; };
+		3014637E265C4BDF00D572D9 /* CookerMyPositionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014637D265C4BDF00D572D9 /* CookerMyPositionsViewController.swift */; };
+		30146380265C4F1E00D572D9 /* CookerFreePositionsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014637F265C4F1E00D572D9 /* CookerFreePositionsModule.swift */; };
+		30146382265C4FAB00D572D9 /* CookerFreePositionsPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146381265C4FAB00D572D9 /* CookerFreePositionsPresenterDefault.swift */; };
+		30146385265C50EA00D572D9 /* FreePositionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146383265C50EA00D572D9 /* FreePositionsTableViewCell.swift */; };
+		30146386265C50EA00D572D9 /* FreePositionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30146384265C50EA00D572D9 /* FreePositionsTableViewCell.xib */; };
+		30146389265C5A3900D572D9 /* CookerMyPositionsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30146388265C5A3900D572D9 /* CookerMyPositionsModule.swift */; };
+		3014638B265C5AAE00D572D9 /* CookerMyPositionsPresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014638A265C5AAE00D572D9 /* CookerMyPositionsPresenterDefault.swift */; };
+		3014638F265C5D6300D572D9 /* MyPositionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014638D265C5D6300D572D9 /* MyPositionsTableViewCell.swift */; };
+		30146390265C5D6300D572D9 /* MyPositionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3014638E265C5D6300D572D9 /* MyPositionsTableViewCell.xib */; };
 		304F1EA125E1B5C800A86F04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA025E1B5C800A86F04 /* AppDelegate.swift */; };
 		304F1EA325E1B5C800A86F04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */; };
 		304F1EA525E1B5C800A86F04 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F1EA425E1B5C800A86F04 /* MainMenuViewController.swift */; };
@@ -130,6 +143,19 @@
 		30146369265C222100D572D9 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		3014636C265C29ED00D572D9 /* MenuTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTarget.swift; sourceTree = "<group>"; };
 		3014636E265C2AAB00D572D9 /* DishTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTarget.swift; sourceTree = "<group>"; };
+		30146371265C4AF200D572D9 /* CookerWorkflow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CookerWorkflow.storyboard; sourceTree = "<group>"; };
+		30146373265C4B1A00D572D9 /* CookerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookerTabBarController.swift; sourceTree = "<group>"; };
+		30146379265C4BC900D572D9 /* CookerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookerProfileViewController.swift; sourceTree = "<group>"; };
+		3014637B265C4BD500D572D9 /* CookerFreePositionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookerFreePositionsViewController.swift; sourceTree = "<group>"; };
+		3014637D265C4BDF00D572D9 /* CookerMyPositionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookerMyPositionsViewController.swift; sourceTree = "<group>"; };
+		3014637F265C4F1E00D572D9 /* CookerFreePositionsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookerFreePositionsModule.swift; sourceTree = "<group>"; };
+		30146381265C4FAB00D572D9 /* CookerFreePositionsPresenterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookerFreePositionsPresenterDefault.swift; sourceTree = "<group>"; };
+		30146383265C50EA00D572D9 /* FreePositionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreePositionsTableViewCell.swift; sourceTree = "<group>"; };
+		30146384265C50EA00D572D9 /* FreePositionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreePositionsTableViewCell.xib; sourceTree = "<group>"; };
+		30146388265C5A3900D572D9 /* CookerMyPositionsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookerMyPositionsModule.swift; sourceTree = "<group>"; };
+		3014638A265C5AAE00D572D9 /* CookerMyPositionsPresenterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookerMyPositionsPresenterDefault.swift; sourceTree = "<group>"; };
+		3014638D265C5D6300D572D9 /* MyPositionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPositionsTableViewCell.swift; sourceTree = "<group>"; };
+		3014638E265C5D6300D572D9 /* MyPositionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPositionsTableViewCell.xib; sourceTree = "<group>"; };
 		304F1E9D25E1B5C800A86F04 /* RESTaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304F1EA025E1B5C800A86F04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304F1EA225E1B5C800A86F04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -334,6 +360,66 @@
 			path = MenuTableViewCell;
 			sourceTree = "<group>";
 		};
+		30146370265C3F8400D572D9 /* Cooker */ = {
+			isa = PBXGroup;
+			children = (
+				30146378265C4B9E00D572D9 /* MyPositions */,
+				30146377265C4B5F00D572D9 /* FreePositions */,
+				30146375265C4B5300D572D9 /* Profile */,
+				30146371265C4AF200D572D9 /* CookerWorkflow.storyboard */,
+				30146373265C4B1A00D572D9 /* CookerTabBarController.swift */,
+			);
+			path = Cooker;
+			sourceTree = "<group>";
+		};
+		30146375265C4B5300D572D9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				30146379265C4BC900D572D9 /* CookerProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		30146377265C4B5F00D572D9 /* FreePositions */ = {
+			isa = PBXGroup;
+			children = (
+				30146387265C50F300D572D9 /* FreePositionsTableViewCell */,
+				3014637B265C4BD500D572D9 /* CookerFreePositionsViewController.swift */,
+				3014637F265C4F1E00D572D9 /* CookerFreePositionsModule.swift */,
+				30146381265C4FAB00D572D9 /* CookerFreePositionsPresenterDefault.swift */,
+			);
+			path = FreePositions;
+			sourceTree = "<group>";
+		};
+		30146378265C4B9E00D572D9 /* MyPositions */ = {
+			isa = PBXGroup;
+			children = (
+				3014638C265C5D5000D572D9 /* MyPositionsTableViewCell */,
+				3014637D265C4BDF00D572D9 /* CookerMyPositionsViewController.swift */,
+				30146388265C5A3900D572D9 /* CookerMyPositionsModule.swift */,
+				3014638A265C5AAE00D572D9 /* CookerMyPositionsPresenterDefault.swift */,
+			);
+			path = MyPositions;
+			sourceTree = "<group>";
+		};
+		30146387265C50F300D572D9 /* FreePositionsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				30146384265C50EA00D572D9 /* FreePositionsTableViewCell.xib */,
+				30146383265C50EA00D572D9 /* FreePositionsTableViewCell.swift */,
+			);
+			path = FreePositionsTableViewCell;
+			sourceTree = "<group>";
+		};
+		3014638C265C5D5000D572D9 /* MyPositionsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3014638D265C5D6300D572D9 /* MyPositionsTableViewCell.swift */,
+				3014638E265C5D6300D572D9 /* MyPositionsTableViewCell.xib */,
+			);
+			path = MyPositionsTableViewCell;
+			sourceTree = "<group>";
+		};
 		304F1E9425E1B5C800A86F04 = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +500,7 @@
 		30F8D7A8264887360072F908 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				30146370265C3F8400D572D9 /* Cooker */,
 				30146329265B090900D572D9 /* Waiter */,
 				30146302265A76A800D572D9 /* Client */,
 				30F8D7B226489E3D0072F908 /* QRCodeScanner */,
@@ -537,6 +624,7 @@
 			files = (
 				30146345265BF09F00D572D9 /* FreeOrdersTableViewCell.xib in Resources */,
 				30F8D79E264880550072F908 /* RedHatDisplay-Medium.ttf in Resources */,
+				30146372265C4AF200D572D9 /* CookerWorkflow.storyboard in Resources */,
 				30146308265A77B900D572D9 /* ClientWorkflow.storyboard in Resources */,
 				30146350265C02B700D572D9 /* MyOrdersTableViewCell.xib in Resources */,
 				304F1EAD25E1B5CC00A86F04 /* LaunchScreen.storyboard in Resources */,
@@ -544,6 +632,7 @@
 				30F8D7A0264880550072F908 /* RedHatDisplay-MediumItalic.ttf in Resources */,
 				30F8D7A2264880550072F908 /* RedHatDisplay-Black.ttf in Resources */,
 				30F8D79F264880550072F908 /* RedHatDisplay-BoldItalic.ttf in Resources */,
+				30146386265C50EA00D572D9 /* FreePositionsTableViewCell.xib in Resources */,
 				304F1EAA25E1B5CC00A86F04 /* Assets.xcassets in Resources */,
 				3014635C265C111700D572D9 /* OrderDetailPositionTableViewCell.xib in Resources */,
 				304F1EA825E1B5C800A86F04 /* Main.storyboard in Resources */,
@@ -551,6 +640,7 @@
 				3014636B265C222100D572D9 /* MenuTableViewCell.xib in Resources */,
 				30F8D7AB264888E40072F908 /* Colors.xcassets in Resources */,
 				30F8D7A1264880550072F908 /* RedHatDisplay-Bold.ttf in Resources */,
+				30146390265C5D6300D572D9 /* MyPositionsTableViewCell.xib in Resources */,
 				30F8D7A3264880550072F908 /* RedHatDisplay-BlackItalic.ttf in Resources */,
 				3014632B265B091F00D572D9 /* WaiterWorkflow.storyboard in Resources */,
 				30146316265A977100D572D9 /* CurrentOrderPositionTableViewCell.xib in Resources */,
@@ -609,12 +699,14 @@
 				3014630F265A85BD00D572D9 /* ClientCurrentOrderViewController.swift in Sources */,
 				3014633A265BB65500D572D9 /* WaiterFreeOrdersViewController.swift in Sources */,
 				30146364265C1BA900D572D9 /* MenuModule.swift in Sources */,
+				30146374265C4B1A00D572D9 /* CookerTabBarController.swift in Sources */,
 				30146315265A977100D572D9 /* CurrentOrderPositionTableViewCell.swift in Sources */,
 				30146362265C1BA000D572D9 /* MenuViewController.swift in Sources */,
 				30146340265BE91500D572D9 /* WaiterFreeOrdersPresenterDefault.swift in Sources */,
 				30146353265C04B700D572D9 /* OrderDetailViewController.swift in Sources */,
 				30146320265AC0C800D572D9 /* QRCodeScannerModule.swift in Sources */,
 				3080105926495A3800373E33 /* UIApplication+Extensions.swift in Sources */,
+				3014638F265C5D6300D572D9 /* MyPositionsTableViewCell.swift in Sources */,
 				30146347265BF32100D572D9 /* DateFormatterHelper.swift in Sources */,
 				3014630D265A802B00D572D9 /* ClientProfileViewController.swift in Sources */,
 				30F8D7A7264887250072F908 /* AuthorizationViewController.swift in Sources */,
@@ -624,8 +716,13 @@
 				30146338265BB64A00D572D9 /* WaiterProfileViewController.swift in Sources */,
 				30801057264955C500373E33 /* QRData.swift in Sources */,
 				30146322265AD34700D572D9 /* OrderResponse.swift in Sources */,
+				30146389265C5A3900D572D9 /* CookerMyPositionsModule.swift in Sources */,
 				30146326265AD63000D572D9 /* ClientCurrentOrderModule.swift in Sources */,
+				30146380265C4F1E00D572D9 /* CookerFreePositionsModule.swift in Sources */,
 				3080105B26495FAF00373E33 /* AuthorizationModule.swift in Sources */,
+				3014638B265C5AAE00D572D9 /* CookerMyPositionsPresenterDefault.swift in Sources */,
+				3014637A265C4BC900D572D9 /* CookerProfileViewController.swift in Sources */,
+				30146385265C50EA00D572D9 /* FreePositionsTableViewCell.swift in Sources */,
 				30146355265C0D8B00D572D9 /* OrderDetailModule.swift in Sources */,
 				304F1EA525E1B5C800A86F04 /* MainMenuViewController.swift in Sources */,
 				3014636A265C222100D572D9 /* MenuTableViewCell.swift in Sources */,
@@ -640,6 +737,7 @@
 				3014632F265B169300D572D9 /* UITabBarController+Extensions.swift in Sources */,
 				30146333265B17F100D572D9 /* UserDefaultsHelper.swift in Sources */,
 				304F1EA125E1B5C800A86F04 /* AppDelegate.swift in Sources */,
+				3014637C265C4BD500D572D9 /* CookerFreePositionsViewController.swift in Sources */,
 				30146331265B16F100D572D9 /* WaiterTabBarController.swift in Sources */,
 				30146357265C0DF900D572D9 /* OrderDetailPresenterDefault.swift in Sources */,
 				3080105D26495FEB00373E33 /* AuthorizationPresenterDefault.swift in Sources */,
@@ -649,8 +747,10 @@
 				30146318265A9E0C00D572D9 /* UITableView+Extensions.swift in Sources */,
 				304F1EA325E1B5C800A86F04 /* SceneDelegate.swift in Sources */,
 				30146328265AD65500D572D9 /* ClientCurrentOrderPresenterDefault.swift in Sources */,
+				3014637E265C4BDF00D572D9 /* CookerMyPositionsViewController.swift in Sources */,
 				308010602649653500373E33 /* AuthorizationTarget.swift in Sources */,
 				3014631A265A9E2400D572D9 /* UITableViewCell+Extensions.swift in Sources */,
+				30146382265C4FAB00D572D9 /* CookerFreePositionsPresenterDefault.swift in Sources */,
 				3014636D265C29ED00D572D9 /* MenuTarget.swift in Sources */,
 				3014631C265AC03500D572D9 /* TableTarget.swift in Sources */,
 				308010552649531300373E33 /* QRScannerView.swift in Sources */,

@@ -36,7 +36,10 @@ class MainMenuViewController: UIViewController {
                 UIApplication.shared.windows.first?.rootViewController = waiterWorflowVc
                 UIApplication.shared.windows.first?.makeKeyAndVisible()
             case "COOK":
-                //TODO: Dodelats
+                let storyboard = UIStoryboard(name: GlobalConstants.storyboardCookerWorkflowName, bundle: nil)
+                let cookerWorflowVc = storyboard.instantiateViewController(identifier: GlobalConstants.viewControllerCookerTabBarName)
+                UIApplication.shared.windows.first?.rootViewController = cookerWorflowVc
+                UIApplication.shared.windows.first?.makeKeyAndVisible()
                 break
             default:
                 break

@@ -10,6 +10,8 @@ import Moya
 public enum PositionTarget {
     case changePositionStatus(positionID: Int, status: String)
     case addPositionByDishIdToOrder(dishID: Int, orderID: String)
+    case getPositionsByStatus(status: String)
+    case getMyPositions
 }
 
 extension PositionTarget: TargetType {
@@ -24,6 +26,10 @@ extension PositionTarget: TargetType {
             return "/api/position/status"
         case .addPositionByDishIdToOrder:
             return "/api/position"
+        case .getPositionsByStatus:
+            return "/api/position/status"
+        case .getMyPositions:
+            return "/api/position/my"
         }
     }
 
@@ -31,6 +37,8 @@ extension PositionTarget: TargetType {
         switch self {
         case .changePositionStatus, .addPositionByDishIdToOrder:
             return .post
+        case .getPositionsByStatus, .getMyPositions:
+            return .get
         }
     }
 
@@ -44,6 +52,10 @@ extension PositionTarget: TargetType {
             return .requestParameters(parameters: ["id" : positionID, "status" : positionStatus], encoding: JSONEncoding.default)
         case .addPositionByDishIdToOrder(let dishID, let orderID):
             return .requestJSONEncodable(AddRequest(dish: Dish(id: dishID), orderId: orderID))
+        case .getPositionsByStatus(let status):
+            return .requestParameters(parameters: ["status" : status], encoding: URLEncoding.default)
+        case .getMyPositions:
+            return .requestPlain
         }
     }
 
@@ -52,7 +64,11 @@ extension PositionTarget: TargetType {
         if let authorizationResponse = UserDefaultsHelper.getCurrentAuthorizationInfo() {
             token = authorizationResponse.token
         }
-        return ["Authorization":token]
+        return ["Authorization" : token]
+    }
+    
+    public var validationType: ValidationType {
+        return .successAndRedirectCodes
     }
 }
 
