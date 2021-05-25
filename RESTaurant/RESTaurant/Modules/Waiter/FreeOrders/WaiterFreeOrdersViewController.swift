@@ -50,8 +50,15 @@ class WaiterFreeOrdersViewController: BaseViewController {
     }
 
     private func takeOrder(orderID: String) {
-        showActivityIndicatorView()
-        presenter.takeOrder(orderID: orderID)
+        let alertController = UIAlertController(title: "Подтверждение", message: "Вы уверены, что хотите принять заказ?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Да", style: .destructive) { [weak self] _ in
+            self?.showActivityIndicatorView()
+            self?.presenter.takeOrder(orderID: orderID)
+        }
+        let noAction = UIAlertAction(title: "Нет", style: .default, handler: nil)
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        present(alertController, animated: true, completion: nil)
     }
 
     @objc private func updateData() {

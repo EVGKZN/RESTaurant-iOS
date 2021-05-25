@@ -36,6 +36,17 @@ class CookerMyPositionsPresenterDefault: CookerMyPositionsPresenter {
     }
 
     func markPositionAsCooked(positionID: Int) {
-
+        positionsProvider.request(.changePositionStatus(positionID: positionID, status: "COOKED")) { [weak self] (result) in
+            switch result {
+            case let .success(response):
+                do {
+                    print(response)
+                    self?.loadMyPositions()
+                }
+            case let .failure(error):
+                print(error)
+                self?.view?.showErrorAlert()
+            }
+        }
     }
 }

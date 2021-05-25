@@ -122,8 +122,15 @@ class OrderDetailViewController: BaseViewController {
     }
 
     private func servePosition(positionID: Int) {
-        showActivityIndicatorView()
-        presenter.servePosition(positionID: positionID, positionStatus: "DELIVERED")
+        let alertController = UIAlertController(title: "Подтверждение", message: "Вы уверены, что блюдо подано?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Да", style: .destructive) { [weak self] _ in
+            self?.showActivityIndicatorView()
+            self?.presenter.servePosition(positionID: positionID, positionStatus: "DELIVERED")
+        }
+        let noAction = UIAlertAction(title: "Нет", style: .default, handler: nil)
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        present(alertController, animated: true, completion: nil)
     }
 
     @objc private func menuButtonDidPress() {

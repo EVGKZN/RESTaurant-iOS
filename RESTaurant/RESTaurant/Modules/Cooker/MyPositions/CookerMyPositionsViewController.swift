@@ -43,9 +43,11 @@ class CookerMyPositionsViewController: BaseViewController {
         if myPositions.isEmpty {
             emptyPositionsView.isHidden = false
             myPositionsTableView.isHidden = true
+            myPositionsTableView.separatorStyle = .none
         } else {
             emptyPositionsView.isHidden = true
             myPositionsTableView.isHidden = false
+            myPositionsTableView.separatorStyle = .singleLine
         }
     }
 
