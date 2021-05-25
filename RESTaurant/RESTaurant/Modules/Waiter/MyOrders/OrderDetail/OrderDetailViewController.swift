@@ -66,7 +66,7 @@ class OrderDetailViewController: BaseViewController {
             closeOrderButton.isEnabled = false
             return
         }
-        if let _ = order.positions.first(where: { $0.status != "COOKED" }) {
+        if let _ = order.positions.first(where: { $0.status != "DELIVERED" }) {
             closeOrderButton.isEnabled = false
         } else {
             closeOrderButton.isEnabled = true
