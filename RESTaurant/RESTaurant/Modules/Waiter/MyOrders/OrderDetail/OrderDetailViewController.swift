@@ -16,6 +16,7 @@ class OrderDetailViewController: BaseViewController {
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var orderPositionsTableView: UITableView!
     @IBOutlet weak var emptyPositionsView: UIView!
+    @IBOutlet weak var closeOrderButton: UIButton!
     
     private var order: OrderResponse?
     private let presenter: OrderDetailPresenter = OrderDetailPresenterDefault()
@@ -29,6 +30,7 @@ class OrderDetailViewController: BaseViewController {
         setupNavigationController()
         setupTableView()
         setupData()
+        setupCloseOrderButton()
         setupOrderContainerView()
         setupRefreshControl()
     }
@@ -51,11 +53,23 @@ class OrderDetailViewController: BaseViewController {
         navigationItem.rightBarButtonItem = menuButton
     }
 
+
+    private func setupCloseOrderButton() {
+        closeOrderButton.setTitleColor(UIColor.lightGray, for: .disabled)
+        closeOrderButton.setTitleColor(GlobalConstants.brandBlueColor, for: .normal)
+    }
+
     private func setupData() {
         guard let order = order else {
             emptyPositionsView.isHidden = false
             orderContainerView.isHidden = true
+            closeOrderButton.isEnabled = false
             return
+        }
+        if let _ = order.positions.first(where: { $0.status != "COOKED" }) {
+            closeOrderButton.isEnabled = false
+        } else {
+            closeOrderButton.isEnabled = true
         }
         tableNumberLabel.text = "Стол №\(order.table.number)"
         reservationTimeLabel.text = DateFormatterHelper.getHoursAndMinutedFromDate(date: order.createTime)
@@ -122,6 +136,11 @@ class OrderDetailViewController: BaseViewController {
             destination.configure(order: order)
         }
     }
+    @IBAction func closeOrderDidPress(_ sender: Any) {
+        guard let order = order else { return }
+        showActivityIndicatorView()
+        presenter.closeOrder(orderID: order.id)
+    }
 }
 
 extension OrderDetailViewController: UITableViewDelegate {
@@ -162,5 +181,10 @@ extension OrderDetailViewController: OrderDetailView {
 
     func positionSuccessfulServed() {
         updateData()
+    }
+
+    func performSuccessfulOrderdClosing() {
+        hideActivityIndicatorView()
+        navigationController?.popViewController(animated: true)
     }
 }

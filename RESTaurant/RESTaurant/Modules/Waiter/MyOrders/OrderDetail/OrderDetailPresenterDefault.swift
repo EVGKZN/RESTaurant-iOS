@@ -50,4 +50,19 @@ class OrderDetailPresenterDefault: OrderDetailPresenter {
             }
         }
     }
+
+    func closeOrder(orderID: String) {
+        orderProvider.request(.closeOrder(orderID: orderID)) { [weak self] (result) in
+            switch result {
+            case let .success(response):
+                do {
+                    print(response)
+                    self?.view?.performSuccessfulOrderdClosing()
+                }
+            case let .failure(error):
+                print(error)
+                self?.view?.showErrorAlert()
+            }
+        }
+    }
 }

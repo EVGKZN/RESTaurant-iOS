@@ -37,29 +37,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="clU-7U-AKy">
-                                <rect key="frame" x="0.0" y="170" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="176" width="414" height="686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мои заказы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R7-yE-Pde">
-                                <rect key="frame" x="20" y="108" width="374" height="42"/>
+                                <rect key="frame" x="20" y="108" width="374" height="48"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0M-z0-Gnf">
-                                <rect key="frame" x="0.0" y="170" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="176" width="414" height="686"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9EK-PK-RlY">
-                                        <rect key="frame" x="44" y="232" width="326.5" height="228.5"/>
+                                        <rect key="frame" x="39.5" y="225" width="335.5" height="236.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В данный момент у вас нет активных заказов" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spG-Ao-lVE">
-                                                <rect key="frame" x="0.0" y="0.0" width="326.5" height="58.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335.5" height="66.5"/>
                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                                 <color key="textColor" name="BrandGrayText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="9ZD-Lt-bVT">
-                                                <rect key="frame" x="88" y="68.5" width="150" height="150"/>
+                                                <rect key="frame" x="92.5" y="76.5" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="M9e-oH-axD"/>
                                                     <constraint firstAttribute="height" constant="150" id="O8m-ZM-oe8"/>
@@ -77,7 +77,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1Q-r7-2e5">
-                                        <rect key="frame" x="172" y="465.5" width="70" height="30"/>
+                                        <rect key="frame" x="172" y="466.5" width="70" height="30"/>
                                         <state key="normal" title="Обновить"/>
                                         <connections>
                                             <action selector="updateDataDidPress:" destination="uMf-K3-R7F" eventType="touchUpInside" id="1da-8Z-9d3"/>
@@ -131,25 +131,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TableNumber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBD-nJ-J0W">
-                                <rect key="frame" x="20" y="88" width="374" height="42"/>
+                                <rect key="frame" x="20" y="88" width="374" height="48"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="rK6-O4-63U">
-                                <rect key="frame" x="20" y="150" width="374" height="42"/>
+                                <rect key="frame" x="20" y="156" width="374" height="48"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AxI-AN-Dvd">
-                                        <rect key="frame" x="151.5" y="0.0" width="222.5" height="21"/>
+                                        <rect key="frame" x="132" y="0.0" width="242" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время бронирования:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaz-Hd-EIE">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="24"/>
                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcU-So-mt6">
-                                                <rect key="frame" x="192" y="0.0" width="30.5" height="21"/>
+                                                <rect key="frame" x="202" y="0.0" width="40" height="24"/>
                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -157,16 +157,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PLp-O6-vQU">
-                                        <rect key="frame" x="188.5" y="21" width="185.5" height="21"/>
+                                        <rect key="frame" x="171" y="24" width="203" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество мест:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRL-jz-VkX">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="24"/>
                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64p-tR-IuK">
-                                                <rect key="frame" x="155" y="0.0" width="30.5" height="21"/>
+                                                <rect key="frame" x="163" y="0.0" width="40" height="24"/>
                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -176,22 +176,22 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chP-rP-PJt">
-                                <rect key="frame" x="0.0" y="196" width="370" height="700"/>
+                                <rect key="frame" x="0.0" y="270" width="370" height="626"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Oxq-is-HJl">
-                                        <rect key="frame" x="20" y="4" width="330" height="29.5"/>
+                                        <rect key="frame" x="20" y="4" width="330" height="33.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qUE-YT-ndK">
-                                                <rect key="frame" x="0.0" y="0.0" width="109" height="29.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="33.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итог:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1f-th-t3x">
-                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="29.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="33.5"/>
                                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHN-yu-HRj">
-                                                        <rect key="frame" x="67" y="0.0" width="42" height="29.5"/>
+                                                        <rect key="frame" x="68" y="0.0" width="55.5" height="33.5"/>
                                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -201,14 +201,14 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDK-Pj-9Cf" userLabel="separatorView">
-                                        <rect key="frame" x="20" y="37.5" width="330" height="1"/>
+                                        <rect key="frame" x="20" y="41.5" width="330" height="1"/>
                                         <color key="backgroundColor" name="BrandGray"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Rvr-IT-8fL"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Y-ef-M5h">
-                                        <rect key="frame" x="0.0" y="42.5" width="370" height="657.5"/>
+                                        <rect key="frame" x="0.0" y="46.5" width="370" height="579.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -227,19 +227,19 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9d-mW-F9n">
-                                <rect key="frame" x="0.0" y="196" width="370" height="700"/>
+                                <rect key="frame" x="0.0" y="270" width="370" height="626"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XH3-a2-M8m">
-                                        <rect key="frame" x="56.5" y="236" width="257" height="228.5"/>
+                                        <rect key="frame" x="49.5" y="195" width="271" height="236.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Клиенты пока ничего не заказали" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-75-eHY">
-                                                <rect key="frame" x="0.0" y="0.0" width="257" height="58.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="271" height="66.5"/>
                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                                 <color key="textColor" name="BrandGrayText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noPositions" translatesAutoresizingMaskIntoConstraints="NO" id="ZyZ-Ai-THR">
-                                                <rect key="frame" x="53.5" y="68.5" width="150" height="150"/>
+                                                <rect key="frame" x="60.5" y="76.5" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="K6d-Um-VdN"/>
                                                     <constraint firstAttribute="width" constant="150" id="PwP-0q-OMM"/>
@@ -257,7 +257,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhN-9x-6vz">
-                                        <rect key="frame" x="150" y="459.5" width="70" height="30"/>
+                                        <rect key="frame" x="150" y="426.5" width="70" height="30"/>
                                         <state key="normal" title="Обновить"/>
                                         <connections>
                                             <action selector="updateButtonDidPress:" destination="f4q-bY-mxL" eventType="touchUpInside" id="xdC-dV-3Zc"/>
@@ -275,6 +275,23 @@
                                     <constraint firstItem="XH3-a2-M8m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I9d-mW-F9n" secondAttribute="leading" constant="20" id="xpK-ZJ-CX2"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI7-n3-bmh">
+                                <rect key="frame" x="20" y="214" width="374" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
+                                <state key="normal" title="Закрыть заказ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeOrderDidPress:" destination="f4q-bY-mxL" eventType="touchUpInside" id="T4H-Pf-cy3"/>
+                                    <action selector="logoutButtonDidPress:" destination="7hO-3k-Mwt" eventType="touchUpInside" id="zOq-F5-Vdy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IJ8-3n-BhF"/>
                         <color key="backgroundColor" name="BrandBlue"/>
@@ -284,8 +301,10 @@
                             <constraint firstItem="IJ8-3n-BhF" firstAttribute="trailing" secondItem="chP-rP-PJt" secondAttribute="trailing" constant="44" id="2FB-xh-Bji"/>
                             <constraint firstItem="chP-rP-PJt" firstAttribute="leading" secondItem="guK-U7-KBy" secondAttribute="leading" id="79f-uc-iaL"/>
                             <constraint firstAttribute="bottom" secondItem="chP-rP-PJt" secondAttribute="bottom" id="7GF-Ac-jg2"/>
-                            <constraint firstItem="chP-rP-PJt" firstAttribute="top" secondItem="rK6-O4-63U" secondAttribute="bottom" constant="4" id="F8q-Bp-M3a"/>
+                            <constraint firstItem="GI7-n3-bmh" firstAttribute="leading" secondItem="IJ8-3n-BhF" secondAttribute="leading" constant="20" id="DvQ-gd-rp8"/>
+                            <constraint firstItem="chP-rP-PJt" firstAttribute="top" secondItem="GI7-n3-bmh" secondAttribute="bottom" constant="10" id="F8q-Bp-M3a"/>
                             <constraint firstItem="jBD-nJ-J0W" firstAttribute="leading" secondItem="IJ8-3n-BhF" secondAttribute="leading" constant="20" id="Kev-rq-7In"/>
+                            <constraint firstItem="IJ8-3n-BhF" firstAttribute="trailing" secondItem="GI7-n3-bmh" secondAttribute="trailing" constant="20" id="Pud-fS-Dal"/>
                             <constraint firstItem="rK6-O4-63U" firstAttribute="leading" secondItem="IJ8-3n-BhF" secondAttribute="leading" constant="20" id="R5d-75-dc2"/>
                             <constraint firstItem="IJ8-3n-BhF" firstAttribute="trailing" secondItem="rK6-O4-63U" secondAttribute="trailing" constant="20" id="Xf1-RH-vSi"/>
                             <constraint firstItem="I9d-mW-F9n" firstAttribute="bottom" secondItem="chP-rP-PJt" secondAttribute="bottom" id="YHE-Nu-UQZ"/>
@@ -293,10 +312,12 @@
                             <constraint firstItem="I9d-mW-F9n" firstAttribute="leading" secondItem="chP-rP-PJt" secondAttribute="leading" id="jq7-bY-9tD"/>
                             <constraint firstItem="rK6-O4-63U" firstAttribute="top" secondItem="jBD-nJ-J0W" secondAttribute="bottom" constant="20" id="tVk-UO-Ak1"/>
                             <constraint firstItem="I9d-mW-F9n" firstAttribute="trailing" secondItem="chP-rP-PJt" secondAttribute="trailing" id="z0t-ko-cf8"/>
+                            <constraint firstItem="GI7-n3-bmh" firstAttribute="top" secondItem="rK6-O4-63U" secondAttribute="bottom" constant="10" id="zjA-q5-CCR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jxv-hH-rpE"/>
                     <connections>
+                        <outlet property="closeOrderButton" destination="GI7-n3-bmh" id="2bW-u2-X9d"/>
                         <outlet property="emptyPositionsView" destination="I9d-mW-F9n" id="Zm9-i3-AGI"/>
                         <outlet property="orderContainerView" destination="chP-rP-PJt" id="S5c-pj-s91"/>
                         <outlet property="orderPositionsTableView" destination="Y2Y-ef-M5h" id="eeg-U1-nYi"/>
@@ -320,13 +341,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Меню" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTg-5W-bRT">
-                                <rect key="frame" x="20" y="88" width="374" height="42"/>
+                                <rect key="frame" x="20" y="88" width="374" height="48"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w4Y-GK-1cN">
-                                <rect key="frame" x="0.0" y="150" width="414" height="712"/>
+                                <rect key="frame" x="0.0" y="156" width="414" height="706"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -360,29 +381,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fLc-mr-gEb">
-                                <rect key="frame" x="0.0" y="126" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Свободные заказы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKF-6f-nln">
-                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <rect key="frame" x="20" y="64" width="374" height="48"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnJ-9T-thA">
-                                <rect key="frame" x="0.0" y="126" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2f-Hv-ZMS">
-                                        <rect key="frame" x="55.5" y="254" width="303" height="228.5"/>
+                                        <rect key="frame" x="48.5" y="247" width="317.5" height="236.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Свободных заказов пока что нет" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1B-vv-1sp">
-                                                <rect key="frame" x="0.0" y="0.0" width="303" height="58.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="317.5" height="66.5"/>
                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                                 <color key="textColor" name="BrandGrayText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="PBX-iF-851">
-                                                <rect key="frame" x="76.5" y="68.5" width="150" height="150"/>
+                                                <rect key="frame" x="83.5" y="76.5" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="Saw-5g-nBS"/>
                                                     <constraint firstAttribute="width" constant="150" id="bIa-iO-8c4"/>
@@ -400,7 +421,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZS-Pg-A4E">
-                                        <rect key="frame" x="172" y="490" width="70" height="30"/>
+                                        <rect key="frame" x="172" y="491" width="70" height="30"/>
                                         <state key="normal" title="Обновить"/>
                                         <connections>
                                             <action selector="updateDataDidPress:" destination="wRH-9R-DUk" eventType="touchUpInside" id="Fwy-bD-4Cm"/>
@@ -452,13 +473,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Профиль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1r-ye-aJN">
-                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <rect key="frame" x="20" y="64" width="374" height="48"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNH-GC-1Wr">
-                                <rect key="frame" x="20" y="303.5" width="374" height="42"/>
+                                <rect key="frame" x="20" y="329.5" width="374" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                 <state key="normal" title="Выйти">
@@ -474,34 +495,34 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="haR-jC-Djb">
-                                <rect key="frame" x="20" y="126" width="374" height="147.5"/>
+                                <rect key="frame" x="20" y="132" width="374" height="167.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhP-D2-CIv">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSk-7t-24t">
-                                        <rect key="frame" x="0.0" y="29.5" width="374" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="33.5" width="374" height="33.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Father Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lg8-Ri-8a8">
-                                        <rect key="frame" x="0.0" y="59" width="374" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="67" width="374" height="33.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Giv-Yg-Zb5">
-                                        <rect key="frame" x="0.0" y="88.5" width="374" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="100.5" width="374" height="33.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoo-UH-eOD">
-                                        <rect key="frame" x="0.0" y="118" width="374" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="134" width="374" height="33.5"/>
                                         <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

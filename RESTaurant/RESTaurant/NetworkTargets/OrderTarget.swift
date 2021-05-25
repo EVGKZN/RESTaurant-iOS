@@ -13,6 +13,7 @@ public enum OrderTarget {
     case takeOrderByID(orderID: String)
     case getOrderByID(orderID: String)
     case getWaiterActiveOrders
+    case closeOrder(orderID: String)
 }
 
 extension OrderTarget: TargetType {
@@ -32,6 +33,8 @@ extension OrderTarget: TargetType {
             return "/api/order/my"
         case .getOrderByID(let orderID):
             return "/api/order/\(orderID)"
+        case .closeOrder:
+            return "/api/order/close"
         }
     }
 
@@ -39,7 +42,7 @@ extension OrderTarget: TargetType {
         switch self {
         case .getOrderByTableID, .getOrderByStatus, .getWaiterActiveOrders, .getOrderByID:
             return .get
-        case .takeOrderByID:
+        case .takeOrderByID, .closeOrder:
             return .post
         }
     }
@@ -58,6 +61,8 @@ extension OrderTarget: TargetType {
             return .requestParameters(parameters: ["id" : orderID], encoding: JSONEncoding.default)
         case .getWaiterActiveOrders, .getOrderByID:
             return .requestPlain
+        case .closeOrder(let orderID):
+            return .requestParameters(parameters: ["id" : orderID], encoding: JSONEncoding.default)
         }
     }
 
