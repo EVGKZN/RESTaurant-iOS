@@ -36,6 +36,11 @@ class ClientCurrentOrderViewController: BaseViewController {
 
     private func setupData() {
         if let orderInfo = orderInfo {
+            if let employee = orderInfo.employee {
+                self.waiterNameLabel.text = "\(employee.firstName) \(employee.lastName)"
+            }
+            tableNumberLabel.text = "\(orderInfo.table.number)"
+            reservationTimeLabel.text = DateFormatterHelper.getHoursAndMinutedFromDate(date: orderInfo.createTime)
             if orderInfo.positions.isEmpty {
                 emptyPositionsView.isHidden = false
                 orderContainerView.isHidden = true
@@ -47,12 +52,6 @@ class ClientCurrentOrderViewController: BaseViewController {
                 totalAmountLabel.text = "\(totalAmount) руб."
                 emptyPositionsView.isHidden = true
                 orderContainerView.isHidden = false
-
-                if let employee = orderInfo.employee {
-                    self.waiterNameLabel.text = "\(employee.firstName) \(employee.lastName)"
-                }
-                tableNumberLabel.text = "\(orderInfo.table.number)"
-                reservationTimeLabel.text = DateFormatterHelper.getHoursAndMinutedFromDate(date: orderInfo.createTime)
             }
         } else {
             emptyPositionsView.isHidden = false

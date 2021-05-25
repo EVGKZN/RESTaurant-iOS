@@ -16,7 +16,7 @@ class DateFormatterHelper {
             normalizedStringDate.removeSubrange(fromIndex..<toIndex)
             if let date = fromDateFormatter.date(from: normalizedStringDate) {
                 let toDateFormatter = DateFormatter()
-                toDateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+                toDateFormatter.timeZone = TimeZone(abbreviation: "GMT+3")
                 toDateFormatter.dateFormat = "HH:mm"
                 let dateString = toDateFormatter.string(from: date)
                 return dateString
