@@ -137,9 +137,16 @@ class OrderDetailViewController: BaseViewController {
         }
     }
     @IBAction func closeOrderDidPress(_ sender: Any) {
-        guard let order = order else { return }
-        showActivityIndicatorView()
-        presenter.closeOrder(orderID: order.id)
+        let alertController = UIAlertController(title: "Подтверждение", message: "Вы уверены, что хотите пометить данное блюдо готовым?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Да", style: .destructive) { [weak self] _ in
+            guard let order = self?.order else { return }
+            self?.showActivityIndicatorView()
+            self?.presenter.closeOrder(orderID: order.id)
+        }
+        let noAction = UIAlertAction(title: "Нет", style: .default, handler: nil)
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
 
