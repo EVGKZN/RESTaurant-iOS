@@ -86,6 +86,12 @@ class ClientCurrentOrderViewController: BaseViewController {
     @objc private func refreshOrderInfo() {
         presenter.loadOrderInfo()
     }
+
+    @IBAction func updateInfoDidPress(_ sender: Any) {
+        showActivityIndicatorView()
+        presenter.loadOrderInfo()
+    }
+
 }
 
 extension ClientCurrentOrderViewController : UITableViewDelegate { }
